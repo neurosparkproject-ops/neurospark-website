@@ -11,8 +11,6 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 function App() {
-
-
   const pieData = {
     labels: ["Presale (20%)", "Locked Vesting (80%)"],
     datasets: [
@@ -36,12 +34,13 @@ function App() {
         minHeight: "100vh",
       }}
     >
-
-
       {/* HERO */}
-      <section style={{ padding: "140px 20px", textAlign: "center" }}>
-
-
+      <section
+        style={{
+          padding: "140px 20px",
+          textAlign: "center",
+        }}
+      >
         <img
           src="/logo.png"
           alt="NeuroSpark Logo"
@@ -78,8 +77,6 @@ function App() {
 
 
         <div style={{ marginTop: "40px" }}>
-
-
           <a
             href="https://neurosparkai-demo.vercel.app"
             target="_blank"
@@ -94,7 +91,6 @@ function App() {
                 borderRadius: "8px",
                 fontWeight: "bold",
                 cursor: "pointer",
-                boxShadow: "0 0 15px rgba(0,240,255,0.6)",
               }}
             >
               🔍 Try AI Demo
@@ -121,8 +117,6 @@ function App() {
               💬 Join Telegram
             </button>
           </a>
-
-
         </div>
 
 
@@ -138,17 +132,17 @@ function App() {
         >
           🔒 80% Locked at Launch | Fixed Supply: 500M NSP
         </div>
-
-
       </section>
 
 
-
-
       {/* TOKENOMICS */}
-      <section style={{ padding: "100px 20px", textAlign: "center", background: "#0f172a" }}>
-
-
+      <section
+        style={{
+          padding: "100px 20px",
+          textAlign: "center",
+          background: "#0f172a",
+        }}
+      >
         <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
           📊 Tokenomics
         </h2>
@@ -163,17 +157,16 @@ function App() {
         <div style={{ maxWidth: "420px", margin: "40px auto" }}>
           <Pie data={pieData} />
         </div>
-
-
       </section>
 
 
-
-
       {/* VERIFIED CONTRACTS */}
-      <section style={{ padding: "100px 20px", textAlign: "center" }}>
-
-
+      <section
+        style={{
+          padding: "100px 20px",
+          textAlign: "center",
+        }}
+      >
         <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
           🔍 Verified Smart Contracts
         </h2>
@@ -205,17 +198,17 @@ function App() {
             UnsoldManager
           </a>
         </p>
-
-
       </section>
 
 
-
-
       {/* WHITEPAPER */}
-      <section style={{ padding: "100px 20px", textAlign: "center" }}>
-
-
+      <section
+        style={{
+          padding: "100px 20px",
+          textAlign: "center",
+          background: "#0f172a",
+        }}
+      >
         <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
           📜 Lite Whitepaper
         </h2>
@@ -234,38 +227,25 @@ function App() {
               borderRadius: "8px",
               fontWeight: "bold",
               cursor: "pointer",
-              boxShadow: "0 0 15px rgba(0,240,255,0.5)",
             }}
           >
             Download Whitepaper
           </button>
         </a>
-
-
       </section>
-
-
 
 
       {/* FOOTER */}
       <footer
         style={{
-          padding: "60px 20px",
+          padding: "40px",
           textAlign: "center",
           background: "#0b1220",
-          borderTop: "1px solid rgba(255,255,255,0.05)"
+          fontSize: "14px",
+          opacity: 0.8,
         }}
       >
-
-
-        <div style={{ marginBottom: "20px", fontSize: "16px", fontWeight: "bold" }}>
-          Official Links
-        </div>
-
-
-        <div style={{ marginBottom: "25px" }}>
-
-
+        <div style={{ marginBottom: "15px" }}>
           <a
             href="https://t.me/NeuroSparkOfficial"
             target="_blank"
@@ -287,31 +267,18 @@ function App() {
 
 
           <a
-            href="https://youtube.com/@NeuroSparkWeb3"
+            href="https://youtube.com/@neurosparkweb3"
             target="_blank"
             rel="noreferrer"
             style={{ margin: "0 15px", color: "#00f0ff", textDecoration: "none" }}
           >
             YouTube
           </a>
-
-
         </div>
 
 
-        <div style={{ marginBottom: "20px", opacity: 0.7 }}>
-          Contact: contact@neurosparkai.io
-        </div>
-
-
-        <div style={{ opacity: 0.5 }}>
-          © 2026 NeuroSpark (NSP) — Professional AI Web3 Infrastructure Project
-        </div>
-
-
+        © 2026 NeuroSpark (NSP) — AI Web3 Risk Intelligence Infrastructure
       </footer>
-
-
     </div>
   );
 }
