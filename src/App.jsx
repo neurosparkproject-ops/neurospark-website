@@ -39,16 +39,9 @@ function App() {
 
 
       {/* HERO */}
-      <section
-        style={{
-          padding: "140px 20px",
-          textAlign: "center",
-          position: "relative",
-        }}
-      >
+      <section style={{ padding: "140px 20px", textAlign: "center" }}>
 
 
-        {/* LOGO */}
         <img
           src="/logo.png"
           alt="NeuroSpark Logo"
@@ -66,7 +59,6 @@ function App() {
             background: "linear-gradient(90deg,#00f0ff,#3b82f6)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            textShadow: "0 0 20px rgba(0,240,255,0.4)",
           }}
         >
           NeuroSpark (NSP)
@@ -86,6 +78,8 @@ function App() {
 
 
         <div style={{ marginTop: "40px" }}>
+
+
           <a
             href="https://neurosparkai-demo.vercel.app"
             target="_blank"
@@ -127,10 +121,11 @@ function App() {
               💬 Join Telegram
             </button>
           </a>
+
+
         </div>
 
 
-        {/* LOCK BADGE */}
         <div
           style={{
             marginTop: "40px",
@@ -139,22 +134,21 @@ function App() {
             borderRadius: "30px",
             background: "#111827",
             border: "1px solid #00f0ff",
-            boxShadow: "0 0 12px rgba(0,240,255,0.4)",
           }}
         >
           🔒 80% Locked at Launch | Fixed Supply: 500M NSP
         </div>
+
+
       </section>
 
 
+
+
       {/* TOKENOMICS */}
-      <section
-        style={{
-          padding: "100px 20px",
-          textAlign: "center",
-          background: "#0f172a",
-        }}
-      >
+      <section style={{ padding: "100px 20px", textAlign: "center", background: "#0f172a" }}>
+
+
         <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
           📊 Tokenomics
         </h2>
@@ -166,137 +160,62 @@ function App() {
         <p>No Mint. No Inflation.</p>
 
 
-        <div
-          style={{
-            maxWidth: "420px",
-            margin: "40px auto",
-          }}
-        >
+        <div style={{ maxWidth: "420px", margin: "40px auto" }}>
           <Pie data={pieData} />
         </div>
+
+
       </section>
 
 
-      {/* ROADMAP */}
-      <section
-        style={{
-          padding: "100px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ fontSize: "34px", marginBottom: "50px" }}>
-          🗺 Roadmap
-        </h2>
-
-
-        <div style={{ maxWidth: "700px", margin: "auto" }}>
-          <div style={{ marginBottom: "40px" }}>
-            <h3 style={{ color: "#22c55e" }}>
-              Phase 1 – Infrastructure
-            </h3>
-            <p>
-              Token, Presale, Vesting & UnsoldManager Deployed
-            </p>
-          </div>
-
-
-          <div style={{ marginBottom: "40px" }}>
-            <h3 style={{ color: "#00f0ff" }}>
-              Phase 2 – Community Growth
-            </h3>
-            <p>
-              Website Launch, AI Demo, Telegram & X Expansion
-            </p>
-          </div>
-
-
-          <div style={{ marginBottom: "40px" }}>
-            <h3 style={{ color: "#3b82f6" }}>
-              Phase 3 – Presale & DEX
-            </h3>
-            <p>
-              Stage-Based Presale & Liquidity Allocation
-            </p>
-          </div>
-
-
-          <div>
-            <h3 style={{ color: "#64748b" }}>
-              Phase 4 – AI Platform Expansion
-            </h3>
-            <p>
-              Advanced Risk Scoring & Ecosystem Scaling
-            </p>
-          </div>
-        </div>
-      </section>
 
 
       {/* VERIFIED CONTRACTS */}
-      <section
-        style={{
-          padding: "100px 20px",
-          textAlign: "center",
-          background: "#0f172a",
-        }}
-      >
+      <section style={{ padding: "100px 20px", textAlign: "center" }}>
+
+
         <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
           🔍 Verified Smart Contracts
         </h2>
 
 
         <p>
-          <a
-            href="https://bscscan.com/address/0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://bscscan.com/address/0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe" target="_blank" rel="noreferrer">
             Token Contract
           </a>
         </p>
 
 
         <p>
-          <a
-            href="https://bscscan.com/address/0xAd14070Ace343194a758BCC3E29bE67424E1144A"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://bscscan.com/address/0xAd14070Ace343194a758BCC3E29bE67424E1144A" target="_blank" rel="noreferrer">
             Presale Contract
           </a>
         </p>
 
 
         <p>
-          <a
-            href="https://bscscan.com/address/0x1683c88D0E65a0eC824Fdea01D858E8506912231"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://bscscan.com/address/0x1683c88D0E65a0eC824Fdea01D858E8506912231" target="_blank" rel="noreferrer">
             TokenLockVesting
           </a>
         </p>
 
 
         <p>
-          <a
-            href="https://bscscan.com/address/0x04e8146Cc10885ADB1F604A3CfaC77917FD83534"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://bscscan.com/address/0x04e8146Cc10885ADB1F604A3CfaC77917FD83534" target="_blank" rel="noreferrer">
             UnsoldManager
           </a>
         </p>
+
+
       </section>
 
 
+
+
       {/* WHITEPAPER */}
-      <section
-        style={{
-          padding: "100px 20px",
-          textAlign: "center",
-        }}
-      >
+      <section style={{ padding: "100px 20px", textAlign: "center" }}>
+
+
         <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
           📜 Lite Whitepaper
         </h2>
@@ -321,21 +240,78 @@ function App() {
             Download Whitepaper
           </button>
         </a>
+
+
       </section>
+
+
 
 
       {/* FOOTER */}
       <footer
         style={{
-          padding: "40px",
+          padding: "60px 20px",
           textAlign: "center",
           background: "#0b1220",
-          fontSize: "14px",
-          opacity: 0.6,
+          borderTop: "1px solid rgba(255,255,255,0.05)"
         }}
       >
-        © 2026 NeuroSpark (NSP) — Professional AI Web3 Infrastructure Project
+
+
+        <div style={{ marginBottom: "20px", fontSize: "16px", fontWeight: "bold" }}>
+          Official Links
+        </div>
+
+
+        <div style={{ marginBottom: "25px" }}>
+
+
+          <a
+            href="https://t.me/NeuroSparkOfficial"
+            target="_blank"
+            rel="noreferrer"
+            style={{ margin: "0 15px", color: "#00f0ff", textDecoration: "none" }}
+          >
+            Telegram
+          </a>
+
+
+          <a
+            href="https://x.com/NeuroSparkHQ"
+            target="_blank"
+            rel="noreferrer"
+            style={{ margin: "0 15px", color: "#00f0ff", textDecoration: "none" }}
+          >
+            X
+          </a>
+
+
+          <a
+            href="https://youtube.com/@NeuroSparkWeb3"
+            target="_blank"
+            rel="noreferrer"
+            style={{ margin: "0 15px", color: "#00f0ff", textDecoration: "none" }}
+          >
+            YouTube
+          </a>
+
+
+        </div>
+
+
+        <div style={{ marginBottom: "20px", opacity: 0.7 }}>
+          Contact: contact@neurosparkai.io
+        </div>
+
+
+        <div style={{ opacity: 0.5 }}>
+          © 2026 NeuroSpark (NSP) — Professional AI Web3 Infrastructure Project
+        </div>
+
+
       </footer>
+
+
     </div>
   );
 }
