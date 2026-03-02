@@ -33,7 +33,7 @@ function Navbar() {
         position: "fixed",
         top: 0,
         width: "100%",
-        padding: "18px 40px",
+        padding: "15px 40px",
         background: scrolled
           ? "rgba(11,18,32,0.95)"
           : "rgba(11,18,32,0.7)",
@@ -48,16 +48,16 @@ function Navbar() {
         transition: "all 0.3s ease",
       }}
     >
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <h3
+      <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+        <img
+          src="/logo.png"
+          alt="NeuroSpark Logo"
           style={{
-            color: "#00f0ff",
-            margin: 0,
-            textShadow: "0 0 12px rgba(0,240,255,0.8)",
+            height: "42px",
+            width: "auto",
+            display: "block"
           }}
-        >
-          NeuroSpark
-        </h3>
+        />
       </Link>
 
 
@@ -78,11 +78,23 @@ function Navbar() {
           to="/whitepaper"
           style={{
             color: location.pathname === "/whitepaper" ? "#00f0ff" : "white",
+            marginRight: "25px",
             textDecoration: "none",
           }}
         >
           Whitepaper
         </Link>
+
+
+        <a
+          href="#contracts"
+          style={{
+            color: "white",
+            textDecoration: "none",
+          }}
+        >
+          Contracts
+        </a>
       </div>
     </div>
   );
@@ -112,6 +124,7 @@ function Home() {
           "radial-gradient(circle at 50% 0%, rgba(0,240,255,0.15), transparent 40%), linear-gradient(180deg,#0b1220,#0f172a)",
       }}
     >
+      {/* HERO */}
       <section style={{ textAlign: "center", padding: "120px 20px" }}>
         <h1
           style={{
@@ -141,7 +154,6 @@ function Home() {
               fontWeight: "bold",
               cursor: "pointer",
               boxShadow: "0 0 20px rgba(0,240,255,0.6)",
-              transition: "0.3s",
             }}
           >
             Whitepaper
@@ -150,10 +162,62 @@ function Home() {
       </section>
 
 
+      {/* TOKENOMICS */}
       <section style={{ textAlign: "center", padding: "100px 20px" }}>
         <h2 style={{ fontSize: "32px" }}>Tokenomics</h2>
+        <p>Max Supply: 500,000,000 NSP</p>
+        <p>Presale Allocation: 100,000,000 NSP (20%)</p>
+        <p>Locked in Vesting: 400,000,000 NSP (80%)</p>
+        <p>No Mint. No Inflation.</p>
+
+
         <div style={{ maxWidth: "420px", margin: "40px auto" }}>
           <Pie data={pieData} />
+        </div>
+      </section>
+
+
+      {/* VERIFIED CONTRACTS */}
+      <section
+        id="contracts"
+        style={{
+          textAlign: "center",
+          padding: "100px 20px",
+          background: "#0f172a",
+        }}
+      >
+        <h2 style={{ fontSize: "32px", marginBottom: "40px" }}>
+          Verified Smart Contracts
+        </h2>
+
+
+        <div style={{ maxWidth: "600px", margin: "auto" }}>
+          <p>
+            <a href="https://bscscan.com/address/0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe" target="_blank" rel="noreferrer">
+              Token Contract
+            </a>
+          </p>
+
+
+          <p>
+            <a href="https://bscscan.com/address/0xAd14070Ace343194a758BCC3E29bE67424E1144A" target="_blank" rel="noreferrer">
+              Presale Contract
+            </a>
+          </p>
+
+
+          <p>
+            <a href="https://bscscan.com/address/0x1683c88D0E65a0eC824Fdea01D858E8506912231" target="_blank" rel="noreferrer">
+              TokenLockVesting
+            </a>
+          </p>
+
+
+          <p>
+            <a href="https://bscscan.com/address/0x04e8146Cc10885ADB1F604A3CfaC77917FD83534" target="_blank" rel="noreferrer">
+              UnsoldManager
+            </a>
+          </p>
         </div>
       </section>
 
