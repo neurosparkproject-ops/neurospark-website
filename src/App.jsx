@@ -245,12 +245,59 @@ function Home() {
       </section>
 
 
-      {/* FOOTER */}
-      <footer className="text-center py-10 border-t border-white/10 text-white/50 text-sm">
-        © 2026 NeuroSpark (NSP) — AI-Powered Web3 Security Infrastructure
-      </footer>
+  {/* FOOTER */}
+  <footer style={{
+  padding: "60px 20px",
+  background: "#0a0f1c",
+  borderTop: "1px solid rgba(255,255,255,0.08)",
+  textAlign: "center"
+}}>
 
 
+  <div style={{ marginBottom: "30px" }}>
+    <h3 style={{ fontSize: "18px", marginBottom: "15px", opacity: 0.8 }}>
+      Official Channels
+    </h3>
+
+
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "30px",
+      flexWrap: "wrap"
+    }}>
+      <a href="https://x.com/NeuroSparkHQ" target="_blank" rel="noreferrer"
+         style={{ color: "#22c55e", textDecoration: "none", fontWeight: "bold" }}>
+        X (Twitter)
+      </a>
+
+
+      <a href="https://t.me/NeuroSparkOfficial" target="_blank" rel="noreferrer"
+         style={{ color: "#22c55e", textDecoration: "none", fontWeight: "bold" }}>
+        Telegram
+      </a>
+
+
+      <a href="https://youtube.com/@neurosparkweb3" target="_blank" rel="noreferrer"
+         style={{ color: "#22c55e", textDecoration: "none", fontWeight: "bold" }}>
+        YouTube
+      </a>
+
+
+      <a href="mailto:contact@neurosparkai.io"
+         style={{ color: "#22c55e", textDecoration: "none", fontWeight: "bold" }}>
+        contact@neurosparkai.io
+      </a>
+    </div>
+  </div>
+
+
+  <div style={{ opacity: 0.5, fontSize: "14px" }}>
+    © 2026 NeuroSpark (NSP) — AI-Powered Web3 Risk Intelligence Infrastructure
+  </div>
+
+
+</footer>
     </div>
   );
 }
