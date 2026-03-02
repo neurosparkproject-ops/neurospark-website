@@ -5,8 +5,16 @@ import Whitepaper from "./pages/Whitepaper";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-[#0b1120] text-white">
-
+    <div
+  className="min-h-screen text-white"
+  style={{
+    background: `
+      radial-gradient(circle at 20% 20%, rgba(34,197,94,0.12), transparent 40%),
+      radial-gradient(circle at 80% 30%, rgba(59,130,246,0.10), transparent 40%),
+      linear-gradient(180deg, #0b1120, #0a0f1c)
+    `
+  }}
+>
 
       {/* NAVBAR */}
       <nav className="flex justify-between items-center px-10 py-6 border-b border-white/10 backdrop-blur-md bg-[#0b1120]/80 sticky top-0 z-50">
