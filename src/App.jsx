@@ -69,52 +69,117 @@ function Home() {
 
 
       {/* TOKENOMICS */}
-      <section className="px-6 py-24 bg-[#111827]">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Tokenomics</h2>
+      <section style={{
+  padding: "120px 20px",
+  background: "linear-gradient(180deg, #0f172a, #0b1120)"
+}}>
+  <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
+    
+    <h2 style={{
+      fontSize: "40px",
+      fontWeight: "bold",
+      marginBottom: "60px"
+    }}>
+      Tokenomics
+    </h2>
 
 
-          <div className="grid md:grid-cols-2 gap-10 text-left">
+    <div style={{
+      background: "#111827",
+      padding: "50px",
+      borderRadius: "20px",
+      boxShadow: "0 0 40px rgba(0,0,0,0.6)"
+    }}>
 
 
-            <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-              <h3 className="text-xl font-semibold mb-6">Supply Distribution</h3>
-
-
-              <div className="mb-6">
-                <div className="flex justify-between mb-2">
-                  <span>Presale</span>
-                  <span className="text-green-400 font-semibold">20%</span>
-                </div>
-                <div className="w-full bg-white/10 h-3 rounded-full">
-                  <div className="bg-green-400 h-3 rounded-full w-[20%]"></div>
-                </div>
-              </div>
-
-
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span>TokenLock Vesting</span>
-                  <span className="text-green-400 font-semibold">80%</span>
-                </div>
-                <div className="w-full bg-white/10 h-3 rounded-full">
-                  <div className="bg-green-400 h-3 rounded-full w-[80%]"></div>
-                </div>
-              </div>
-            </div>
-
-
-            <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
-              <h3 className="text-xl font-semibold mb-6">Token Details</h3>
-              <p className="mb-2"><strong>Total Supply:</strong> 500,000,000 NSP</p>
-              <p className="mb-2"><strong>Network:</strong> BNB Smart Chain</p>
-              <p><strong>Mint Function:</strong> Disabled</p>
-            </div>
-
-
-          </div>
+      {/* Presale */}
+      <div style={{ marginBottom: "50px", textAlign: "left" }}>
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginBottom: "12px",
+          fontSize: "18px"
+        }}>
+          <span>Presale Allocation</span>
+          <span style={{ color: "#22c55e", fontWeight: "bold" }}>20%</span>
         </div>
-      </section>
+
+
+        <div style={{
+          width: "100%",
+          height: "24px",
+          background: "#1f2937",
+          borderRadius: "20px",
+          overflow: "hidden"
+        }}>
+          <div style={{
+            width: "20%",
+            height: "100%",
+            background: "linear-gradient(90deg,#22c55e,#16a34a)"
+          }}></div>
+        </div>
+      </div>
+
+
+      {/* TokenLock */}
+      <div style={{ textAlign: "left" }}>
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginBottom: "12px",
+          fontSize: "18px"
+        }}>
+          <span>TokenLock Vesting</span>
+          <span style={{ color: "#3b82f6", fontWeight: "bold" }}>80%</span>
+        </div>
+
+
+        <div style={{
+          width: "100%",
+          height: "24px",
+          background: "#1f2937",
+          borderRadius: "20px",
+          overflow: "hidden"
+        }}>
+          <div style={{
+            width: "80%",
+            height: "100%",
+            background: "linear-gradient(90deg,#3b82f6,#2563eb)"
+          }}></div>
+        </div>
+      </div>
+
+
+      {/* Details */}
+      <div style={{
+        marginTop: "60px",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+        gap: "30px",
+        textAlign: "center"
+      }}>
+        <div>
+          <p style={{ fontSize: "28px", fontWeight: "bold", color: "#22c55e" }}>500M</p>
+          <p style={{ opacity: 0.6 }}>Total Supply</p>
+        </div>
+
+
+        <div>
+          <p style={{ fontSize: "28px", fontWeight: "bold", color: "#22c55e" }}>BNB</p>
+          <p style={{ opacity: 0.6 }}>Network</p>
+        </div>
+
+
+        <div>
+          <p style={{ fontSize: "28px", fontWeight: "bold", color: "#22c55e" }}>No Mint</p>
+          <p style={{ opacity: 0.6 }}>Immutable Supply</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
 
 
       {/* VERIFIED CONTRACTS */}
