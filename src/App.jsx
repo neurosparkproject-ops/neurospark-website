@@ -1,6 +1,5 @@
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Whitepaper from "./pages/Whitepaper";
 import { Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -13,6 +12,9 @@ import {
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
+/* ================= NAVBAR ================= */
+
+
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -20,7 +22,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -33,11 +35,11 @@ function Navbar() {
         position: "fixed",
         top: 0,
         width: "100%",
-        padding: "15px 40px",
+        padding: "18px 50px",
         background: scrolled
-          ? "rgba(11,18,32,0.95)"
-          : "rgba(11,18,32,0.7)",
-        backdropFilter: "blur(12px)",
+          ? "rgba(8,15,28,0.95)"
+          : "rgba(8,15,28,0.7)",
+        backdropFilter: "blur(14px)",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -48,15 +50,11 @@ function Navbar() {
         transition: "all 0.3s ease",
       }}
     >
-      <Link to="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+      <Link to="/" style={{ display: "flex", alignItems: "center" }}>
         <img
           src="/logo.png"
           alt="NeuroSpark Logo"
-          style={{
-            height: "42px",
-            width: "auto",
-            display: "block"
-          }}
+          style={{ height: "40px" }}
         />
       </Link>
 
@@ -66,7 +64,7 @@ function Navbar() {
           to="/"
           style={{
             color: location.pathname === "/" ? "#00f0ff" : "white",
-            marginRight: "25px",
+            marginRight: "30px",
             textDecoration: "none",
           }}
         >
@@ -77,8 +75,11 @@ function Navbar() {
         <Link
           to="/whitepaper"
           style={{
-            color: location.pathname === "/whitepaper" ? "#00f0ff" : "white",
-            marginRight: "25px",
+            color:
+              location.pathname === "/whitepaper"
+                ? "#00f0ff"
+                : "white",
+            marginRight: "30px",
             textDecoration: "none",
           }}
         >
@@ -86,13 +87,7 @@ function Navbar() {
         </Link>
 
 
-        <a
-          href="#contracts"
-          style={{
-            color: "white",
-            textDecoration: "none",
-          }}
-        >
+        <a href="#contracts" style={{ color: "white" }}>
           Contracts
         </a>
       </div>
@@ -101,9 +96,12 @@ function Navbar() {
 }
 
 
+/* ================= HOME ================= */
+
+
 function Home() {
   const pieData = {
-    labels: ["Presale (20%)", "Locked Vesting (80%)"],
+    labels: ["Presale (20%)", "Locked (80%)"],
     datasets: [
       {
         data: [20, 80],
@@ -121,14 +119,15 @@ function Home() {
         minHeight: "100vh",
         color: "white",
         background:
-          "radial-gradient(circle at 50% 0%, rgba(0,240,255,0.15), transparent 40%), linear-gradient(180deg,#0b1220,#0f172a)",
+          "radial-gradient(circle at 50% 0%, rgba(0,240,255,0.15), transparent 40%), linear-gradient(180deg,#070d1a,#0f172a)",
       }}
     >
       {/* HERO */}
-      <section style={{ textAlign: "center", padding: "120px 20px" }}>
+      <section style={{ textAlign: "center", padding: "140px 20px" }}>
         <h1
           style={{
-            fontSize: "52px",
+            fontSize: "60px",
+            fontWeight: "bold",
             background: "linear-gradient(90deg,#00f0ff,#3b82f6)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -138,25 +137,48 @@ function Home() {
         </h1>
 
 
-        <h2 style={{ opacity: 0.85, marginTop: "20px" }}>
+        <h2 style={{ opacity: 0.85, marginTop: "25px" }}>
           AI-Powered Web3 Risk Intelligence Infrastructure
         </h2>
+
+
+        {/* BADGES */}
+        <div style={{ marginTop: "40px" }}>
+          {["No Mint", "100% Verified Contracts", "AI Secured"].map(
+            (item, i) => (
+              <span
+                key={i}
+                style={{
+                  padding: "10px 18px",
+                  margin: "10px",
+                  borderRadius: "30px",
+                  background: "rgba(0,240,255,0.1)",
+                  border: "1px solid rgba(0,240,255,0.4)",
+                  fontSize: "14px",
+                }}
+              >
+                {item}
+              </span>
+            )
+          )}
+        </div>
 
 
         <Link to="/whitepaper">
           <button
             style={{
-              marginTop: "40px",
-              padding: "14px 34px",
+              marginTop: "50px",
+              padding: "16px 40px",
               background: "#00f0ff",
               border: "none",
               borderRadius: "10px",
               fontWeight: "bold",
+              fontSize: "16px",
               cursor: "pointer",
-              boxShadow: "0 0 20px rgba(0,240,255,0.6)",
+              boxShadow: "0 0 30px rgba(0,240,255,0.6)",
             }}
           >
-            Whitepaper
+            View Whitepaper
           </button>
         </Link>
       </section>
@@ -164,60 +186,101 @@ function Home() {
 
       {/* TOKENOMICS */}
       <section style={{ textAlign: "center", padding: "100px 20px" }}>
-        <h2 style={{ fontSize: "32px" }}>Tokenomics</h2>
-        <p>Max Supply: 500,000,000 NSP</p>
-        <p>Presale Allocation: 100,000,000 NSP (20%)</p>
-        <p>Locked in Vesting: 400,000,000 NSP (80%)</p>
-        <p>No Mint. No Inflation.</p>
+        <h2 style={{ fontSize: "36px", marginBottom: "40px" }}>
+          Tokenomics
+        </h2>
 
 
-        <div style={{ maxWidth: "420px", margin: "40px auto" }}>
+        <div style={{ maxWidth: "400px", margin: "auto" }}>
           <Pie data={pieData} />
+        </div>
+
+
+        <div style={{ marginTop: "40px", opacity: 0.85 }}>
+          <p>Max Supply: 500,000,000 NSP</p>
+          <p>Presale Allocation: 100,000,000 NSP (20%)</p>
+          <p>Locked in Vesting: 400,000,000 NSP (80%)</p>
+          <p>No Mint. No Inflation.</p>
         </div>
       </section>
 
 
-      {/* VERIFIED CONTRACTS */}
+      {/* CONTRACTS */}
       <section
         id="contracts"
         style={{
+          padding: "120px 20px",
           textAlign: "center",
-          padding: "100px 20px",
           background: "#0f172a",
         }}
       >
-        <h2 style={{ fontSize: "32px", marginBottom: "40px" }}>
+        <h2 style={{ fontSize: "36px", marginBottom: "60px" }}>
           Verified Smart Contracts
         </h2>
 
 
-        <div style={{ maxWidth: "600px", margin: "auto" }}>
-          <p>
-            <a href="https://bscscan.com/address/0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe" target="_blank" rel="noreferrer">
-              Token Contract
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(260px,1fr))",
+            gap: "30px",
+            maxWidth: "900px",
+            margin: "auto",
+          }}
+        >
+          {[
+            {
+              name: "Token Contract",
+              url: "https://bscscan.com/address/0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe",
+            },
+            {
+              name: "Presale Contract",
+              url: "https://bscscan.com/address/0xAd14070Ace343194a758BCC3E29bE67424E1144A",
+            },
+            {
+              name: "TokenLockVesting",
+              url: "https://bscscan.com/address/0x1683c88D0E65a0eC824Fdea01D858E8506912231",
+            },
+            {
+              name: "UnsoldManager",
+              url: "https://bscscan.com/address/0x04e8146Cc10885ADB1F604A3CfaC77917FD83534",
+            },
+          ].map((contract, i) => (
+            <a
+              key={i}
+              href={contract.url}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                padding: "30px",
+                borderRadius: "14px",
+                background: "rgba(255,255,255,0.03)",
+                border:
+                  "1px solid rgba(0,240,255,0.2)",
+                textDecoration: "none",
+                color: "white",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 25px rgba(0,240,255,0.4)";
+                e.currentTarget.style.transform =
+                  "translateY(-5px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "none";
+                e.currentTarget.style.transform =
+                  "translateY(0px)";
+              }}
+            >
+              <h3>{contract.name}</h3>
+              <p style={{ opacity: 0.6 }}>
+                View on BscScan →
+              </p>
             </a>
-          </p>
-
-
-          <p>
-            <a href="https://bscscan.com/address/0xAd14070Ace343194a758BCC3E29bE67424E1144A" target="_blank" rel="noreferrer">
-              Presale Contract
-            </a>
-          </p>
-
-
-          <p>
-            <a href="https://bscscan.com/address/0x1683c88D0E65a0eC824Fdea01D858E8506912231" target="_blank" rel="noreferrer">
-              TokenLockVesting
-            </a>
-          </p>
-
-
-          <p>
-            <a href="https://bscscan.com/address/0x04e8146Cc10885ADB1F604A3CfaC77917FD83534" target="_blank" rel="noreferrer">
-              UnsoldManager
-            </a>
-          </p>
+          ))}
         </div>
       </section>
 
@@ -225,7 +288,7 @@ function Home() {
       <footer
         style={{
           textAlign: "center",
-          padding: "40px",
+          padding: "50px",
           opacity: 0.6,
         }}
       >
@@ -236,13 +299,86 @@ function Home() {
 }
 
 
+/* ================= WHITEPAPER PAGE ================= */
+
+
+function WhitepaperPage() {
+  return (
+    <div
+      style={{
+        paddingTop: "140px",
+        minHeight: "100vh",
+        background:
+          "linear-gradient(180deg,#070d1a,#0f172a)",
+        color: "white",
+        paddingBottom: "100px",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "900px",
+          margin: "auto",
+          padding: "60px",
+          background: "rgba(255,255,255,0.03)",
+          borderRadius: "16px",
+          border: "1px solid rgba(0,240,255,0.2)",
+        }}
+      >
+        <h1 style={{ marginBottom: "40px" }}>
+          NeuroSpark (NSP) Whitepaper
+        </h1>
+
+
+        <h2>1. Introduction</h2>
+        <p>
+          NeuroSpark (NSP) is an AI-driven Web3 security
+          ecosystem designed to detect, analyze and prevent
+          emerging decentralized threats in real time.
+        </p>
+
+
+        <h2>2. Vision</h2>
+        <p>
+          To become the intelligent security layer of Web3 —
+          an autonomous AI risk detection network.
+        </p>
+
+
+        <h2>3. Token Utility</h2>
+        <ul>
+          <li>Access to premium AI tools</li>
+          <li>Staking rewards</li>
+          <li>Governance rights</li>
+          <li>Enterprise integrations</li>
+        </ul>
+
+
+        <h2>4. Roadmap</h2>
+        <ul>
+          <li>Q1 — Platform Infrastructure</li>
+          <li>Q2 — AI Detection Engine</li>
+          <li>Q3 — Enterprise API</li>
+          <li>Q4 — Cross-chain Expansion</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+
+/* ================= APP ================= */
+
+
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/whitepaper" element={<Whitepaper />} />
+        <Route
+          path="/whitepaper"
+          element={<WhitepaperPage />}
+        />
       </Routes>
     </>
   );
