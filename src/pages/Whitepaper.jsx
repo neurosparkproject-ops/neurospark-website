@@ -2,168 +2,99 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const sectionStyle = {
-  marginBottom: "60px",
-};
-
-
-const Whitepaper = () => {
+export default function Whitepaper() {
   return (
-    <div
-      style={{
-        fontFamily: "Arial",
-        background:
-          "radial-gradient(circle at 50% 0%, rgba(0,240,255,0.15), transparent 40%), linear-gradient(180deg,#0b1220,#0f172a)",
-        color: "white",
-        minHeight: "100vh",
-        padding: "80px 20px",
-      }}
-    >
-      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+    <div className="min-h-screen bg-[#0b1120] text-white px-6 py-20">
+
+
+      <div className="max-w-5xl mx-auto">
+
+
+        <Link to="/" className="text-green-400 text-sm mb-8 inline-block">
+          ← Back to Home
+        </Link>
+
+
         {/* HEADER */}
-        <div style={{ textAlign: "center", marginBottom: "80px" }}>
-          <h1
-            style={{
-              fontSize: "48px",
-              background: "linear-gradient(90deg,#00f0ff,#3b82f6)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
+        <div className="text-center mb-20">
+          <h1 className="text-5xl font-bold mb-6">
             NeuroSpark (NSP)
           </h1>
+          <p className="text-lg text-white/70 max-w-3xl mx-auto mb-8">
+            AI-powered real-time risk intelligence infrastructure designed
+            to protect Web3 ecosystems through predictive exploit modeling
+            and behavioral blockchain analytics.
+          </p>
 
 
-          <h2 style={{ fontWeight: "normal", opacity: 0.8 }}>
-            AI-Powered Web3 Risk Intelligence Infrastructure
-          </h2>
-
-
-          <div style={{ marginTop: "30px" }}>
-            <a
-              href="/NeuroSpark_Lite_Whitepaper_v1.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button
-                style={{
-                  padding: "14px 32px",
-                  background: "#00f0ff",
-                  border: "none",
-                  borderRadius: "8px",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
-              >
-                Download Full PDF
-              </button>
-            </a>
-          </div>
+          <button className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition">
+            Download Full PDF
+          </button>
         </div>
 
 
-        {/* INTRO */}
-        <section style={sectionStyle}>
-          <h2 style={{ color: "#00f0ff" }}>1. Introduction</h2>
-          <p style={{ opacity: 0.85, lineHeight: "1.8" }}>
-            NeuroSpark (NSP) is an AI-driven Web3 security ecosystem designed to
-            detect, analyze and prevent emerging decentralized threats in real time.
-            The platform integrates artificial intelligence, behavioral analytics,
-            smart contract inspection and predictive exploit modeling.
+        {/* EXECUTIVE SUMMARY */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-4 text-green-400">
+            Executive Summary
+          </h2>
+          <p className="text-white/70 leading-relaxed">
+            Billions of dollars are lost annually due to smart contract
+            exploits, oracle manipulation and flash loan attacks.
+            NeuroSpark introduces an AI-native infrastructure that detects,
+            analyzes and predicts vulnerabilities before they escalate.
           </p>
         </section>
 
 
-        {/* VISION */}
-        <section style={sectionStyle}>
-          <h2 style={{ color: "#00f0ff" }}>2. Vision</h2>
-          <p style={{ opacity: 0.85, lineHeight: "1.8" }}>
-            Our vision is to become the intelligent security layer of Web3 —
-            an autonomous risk detection network that continuously monitors
-            blockchain ecosystems and prevents systemic vulnerabilities before
-            they escalate.
-          </p>
-        </section>
-
-
-        {/* PROBLEM */}
-        <section style={sectionStyle}>
-          <h2 style={{ color: "#00f0ff" }}>3. The Problem</h2>
-          <p style={{ opacity: 0.85, lineHeight: "1.8" }}>
-            Billions of dollars are lost yearly due to oracle manipulation,
-            smart contract vulnerabilities, flash loan exploits and account
-            takeovers. Traditional audits are static and reactive.
-            Web3 requires continuous AI-powered protection.
-          </p>
-        </section>
-
-
-        {/* SOLUTION */}
-        <section style={sectionStyle}>
-          <h2 style={{ color: "#00f0ff" }}>4. The Solution</h2>
-          <ul style={{ opacity: 0.85, lineHeight: "1.8" }}>
-            <li>AI Smart Contract Scanner</li>
-            <li>On-chain Behavioral Monitoring</li>
-            <li>Oracle Manipulation Detection</li>
-            <li>Exploit Prediction Engine</li>
-            <li>Enterprise Risk Dashboard</li>
-          </ul>
+        {/* MARKET OPPORTUNITY */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 text-green-400">
+            Market Opportunity
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              "Rapid Web3 Expansion",
+              "Increasing Exploit Frequency",
+              "Demand for AI Security Infrastructure"
+            ].map((item, index) => (
+              <div key={index} className="bg-white/5 border border-white/10 p-6 rounded-xl">
+                {item}
+              </div>
+            ))}
+          </div>
         </section>
 
 
         {/* TOKEN UTILITY */}
-        <section style={sectionStyle}>
-          <h2 style={{ color: "#00f0ff" }}>5. NSP Token Utility</h2>
-          <ul style={{ opacity: 0.85, lineHeight: "1.8" }}>
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-4 text-green-400">
+            NSP Token Utility
+          </h2>
+          <ul className="list-disc list-inside text-white/70 space-y-2">
             <li>Access to premium AI monitoring tools</li>
             <li>Staking for security node rewards</li>
-            <li>Governance voting rights</li>
-            <li>Enterprise service payments</li>
+            <li>Governance participation</li>
+            <li>Enterprise API payments</li>
           </ul>
         </section>
 
 
-        {/* ROADMAP */}
-        <section style={sectionStyle}>
-          <h2 style={{ color: "#00f0ff" }}>6. Roadmap</h2>
-          <ul style={{ opacity: 0.85, lineHeight: "1.8" }}>
-            <li>Q1 – Platform Infrastructure Launch</li>
-            <li>Q2 – AI Detection Engine Deployment</li>
-            <li>Q3 – Enterprise Security API</li>
-            <li>Q4 – Cross-Chain Expansion</li>
+        {/* SECURITY FRAMEWORK */}
+        <section>
+          <h2 className="text-2xl font-bold mb-4 text-green-400">
+            Security Framework
+          </h2>
+          <ul className="text-white/70 space-y-2">
+            <li>4 Verified Smart Contracts</li>
+            <li>Immutable 500M Fixed Supply</li>
+            <li>No Mint Function</li>
+            <li>Transparent Vesting Architecture</li>
           </ul>
         </section>
 
 
-        {/* CTA */}
-        <section style={{ textAlign: "center", marginTop: "100px" }}>
-          <h2>Secure the Future of Web3</h2>
-          <p style={{ opacity: 0.7 }}>
-            Join NeuroSpark and redefine blockchain security standards.
-          </p>
-
-
-          <div style={{ marginTop: "30px" }}>
-            <Link to="/">
-              <button
-                style={{
-                  padding: "14px 30px",
-                  background: "#1e293b",
-                  border: "1px solid #00f0ff",
-                  color: "#00f0ff",
-                  borderRadius: "8px",
-                  cursor: "pointer",
-                }}
-              >
-                Back to Home
-              </button>
-            </Link>
-          </div>
-        </section>
       </div>
     </div>
   );
-};
-
-
-export default Whitepaper;
+}
