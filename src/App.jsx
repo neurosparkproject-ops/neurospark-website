@@ -1,3 +1,6 @@
+import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Whitepaper from "./pages/Whitepaper";
 import { Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -10,15 +13,90 @@ import {
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-function App() {
+function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        padding: "18px 40px",
+        background: scrolled
+          ? "rgba(11,18,32,0.95)"
+          : "rgba(11,18,32,0.7)",
+        backdropFilter: "blur(12px)",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        zIndex: 1000,
+        borderBottom: scrolled
+          ? "1px solid rgba(0,240,255,0.3)"
+          : "none",
+        transition: "all 0.3s ease",
+      }}
+    >
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <h3
+          style={{
+            color: "#00f0ff",
+            margin: 0,
+            textShadow: "0 0 12px rgba(0,240,255,0.8)",
+          }}
+        >
+          NeuroSpark
+        </h3>
+      </Link>
+
+
+      <div>
+        <Link
+          to="/"
+          style={{
+            color: location.pathname === "/" ? "#00f0ff" : "white",
+            marginRight: "25px",
+            textDecoration: "none",
+          }}
+        >
+          Home
+        </Link>
+
+
+        <Link
+          to="/whitepaper"
+          style={{
+            color: location.pathname === "/whitepaper" ? "#00f0ff" : "white",
+            textDecoration: "none",
+          }}
+        >
+          Whitepaper
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+
+function Home() {
   const pieData = {
     labels: ["Presale (20%)", "Locked Vesting (80%)"],
     datasets: [
       {
         data: [20, 80],
         backgroundColor: ["#00f0ff", "#1e293b"],
-        borderColor: ["#00f0ff", "#0f172a"],
-        borderWidth: 2,
+        borderWidth: 0,
       },
     ],
   };
@@ -27,31 +105,14 @@ function App() {
   return (
     <div
       style={{
-        fontFamily: "Arial",
+        paddingTop: "120px",
+        minHeight: "100vh",
+        color: "white",
         background:
           "radial-gradient(circle at 50% 0%, rgba(0,240,255,0.15), transparent 40%), linear-gradient(180deg,#0b1220,#0f172a)",
-        color: "white",
-        minHeight: "100vh",
       }}
     >
-      {/* HERO */}
-      <section
-        style={{
-          padding: "140px 20px",
-          textAlign: "center",
-        }}
-      >
-        <img
-          src="/logo.png"
-          alt="NeuroSpark Logo"
-          style={{
-            width: "110px",
-            marginBottom: "25px",
-            filter: "drop-shadow(0 0 20px rgba(0,240,255,0.6))",
-          }}
-        />
-
-
+      <section style={{ textAlign: "center", padding: "120px 20px" }}>
         <h1
           style={{
             fontSize: "52px",
@@ -64,222 +125,62 @@ function App() {
         </h1>
 
 
-        <h2 style={{ fontSize: "22px", marginTop: "20px", opacity: 0.9 }}>
-          AI-Powered Web3 Risk Intelligence
+        <h2 style={{ opacity: 0.85, marginTop: "20px" }}>
+          AI-Powered Web3 Risk Intelligence Infrastructure
         </h2>
 
 
-        <p style={{ marginTop: "20px", opacity: 0.7 }}>
-          Secure the Future of Web3
-          <br />
-          Analyze. Detect. Protect.
-        </p>
-
-
-        <div style={{ marginTop: "40px" }}>
-          <a
-            href="https://neurosparkai-demo.vercel.app"
-            target="_blank"
-            rel="noreferrer"
+        <Link to="/whitepaper">
+          <button
+            style={{
+              marginTop: "40px",
+              padding: "14px 34px",
+              background: "#00f0ff",
+              border: "none",
+              borderRadius: "10px",
+              fontWeight: "bold",
+              cursor: "pointer",
+              boxShadow: "0 0 20px rgba(0,240,255,0.6)",
+              transition: "0.3s",
+            }}
           >
-            <button
-              style={{
-                padding: "14px 32px",
-                margin: "10px",
-                background: "#00f0ff",
-                border: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-            >
-              🔍 Try AI Demo
-            </button>
-          </a>
-
-
-          <a
-            href="https://t.me/NeuroSparkOfficial"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button
-              style={{
-                padding: "14px 32px",
-                margin: "10px",
-                background: "#1e293b",
-                border: "1px solid #00f0ff",
-                color: "#00f0ff",
-                borderRadius: "8px",
-                cursor: "pointer",
-              }}
-            >
-              💬 Join Telegram
-            </button>
-          </a>
-        </div>
-
-
-        <div
-          style={{
-            marginTop: "40px",
-            display: "inline-block",
-            padding: "10px 22px",
-            borderRadius: "30px",
-            background: "#111827",
-            border: "1px solid #00f0ff",
-          }}
-        >
-          🔒 80% Locked at Launch | Fixed Supply: 500M NSP
-        </div>
+            Whitepaper
+          </button>
+        </Link>
       </section>
 
 
-      {/* TOKENOMICS */}
-      <section
-        style={{
-          padding: "100px 20px",
-          textAlign: "center",
-          background: "#0f172a",
-        }}
-      >
-        <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
-          📊 Tokenomics
-        </h2>
-
-
-        <p>Max Supply: 500,000,000 NSP</p>
-        <p>Presale Allocation: 100,000,000 NSP (20%)</p>
-        <p>Locked in Vesting: 400,000,000 NSP (80%)</p>
-        <p>No Mint. No Inflation.</p>
-
-
+      <section style={{ textAlign: "center", padding: "100px 20px" }}>
+        <h2 style={{ fontSize: "32px" }}>Tokenomics</h2>
         <div style={{ maxWidth: "420px", margin: "40px auto" }}>
           <Pie data={pieData} />
         </div>
       </section>
 
 
-      {/* VERIFIED CONTRACTS */}
-      <section
-        style={{
-          padding: "100px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
-          🔍 Verified Smart Contracts
-        </h2>
-
-
-        <p>
-          <a href="https://bscscan.com/address/0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe" target="_blank" rel="noreferrer">
-            Token Contract
-          </a>
-        </p>
-
-
-        <p>
-          <a href="https://bscscan.com/address/0xAd14070Ace343194a758BCC3E29bE67424E1144A" target="_blank" rel="noreferrer">
-            Presale Contract
-          </a>
-        </p>
-
-
-        <p>
-          <a href="https://bscscan.com/address/0x1683c88D0E65a0eC824Fdea01D858E8506912231" target="_blank" rel="noreferrer">
-            TokenLockVesting
-          </a>
-        </p>
-
-
-        <p>
-          <a href="https://bscscan.com/address/0x04e8146Cc10885ADB1F604A3CfaC77917FD83534" target="_blank" rel="noreferrer">
-            UnsoldManager
-          </a>
-        </p>
-      </section>
-
-
-      {/* WHITEPAPER */}
-      <section
-        style={{
-          padding: "100px 20px",
-          textAlign: "center",
-          background: "#0f172a",
-        }}
-      >
-        <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>
-          📜 Lite Whitepaper
-        </h2>
-
-
-        <a
-          href="/NeuroSpark_Lite_Whitepaper_v1.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button
-            style={{
-              padding: "14px 30px",
-              background: "#00f0ff",
-              border: "none",
-              borderRadius: "8px",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
-          >
-            Download Whitepaper
-          </button>
-        </a>
-      </section>
-
-
-      {/* FOOTER */}
       <footer
         style={{
-          padding: "40px",
           textAlign: "center",
-          background: "#0b1220",
-          fontSize: "14px",
-          opacity: 0.8,
+          padding: "40px",
+          opacity: 0.6,
         }}
       >
-        <div style={{ marginBottom: "15px" }}>
-          <a
-            href="https://t.me/NeuroSparkOfficial"
-            target="_blank"
-            rel="noreferrer"
-            style={{ margin: "0 15px", color: "#00f0ff", textDecoration: "none" }}
-          >
-            Telegram
-          </a>
-
-
-          <a
-            href="https://x.com/NeuroSparkHQ"
-            target="_blank"
-            rel="noreferrer"
-            style={{ margin: "0 15px", color: "#00f0ff", textDecoration: "none" }}
-          >
-            X
-          </a>
-
-
-          <a
-            href="https://youtube.com/@neurosparkweb3"
-            target="_blank"
-            rel="noreferrer"
-            style={{ margin: "0 15px", color: "#00f0ff", textDecoration: "none" }}
-          >
-            YouTube
-          </a>
-        </div>
-
-
-        © 2026 NeuroSpark (NSP) — AI Web3 Risk Intelligence Infrastructure
+        © 2026 NeuroSpark — AI Web3 Risk Intelligence Infrastructure
       </footer>
     </div>
+  );
+}
+
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/whitepaper" element={<Whitepaper />} />
+      </Routes>
+    </>
   );
 }
 
