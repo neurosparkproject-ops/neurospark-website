@@ -34,41 +34,45 @@ function Home() {
 
 
       {/* HERO */}
-      <section className="text-center px-6 py-28 bg-gradient-to-b from-[#0b1120] via-[#111827] to-[#0b1120]">
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-          AI-Powered Web3 Risk Intelligence Infrastructure
-        </h1>
+<section className="text-center px-6 py-28 bg-gradient-to-b from-[#0b1120] via-[#111827] to-[#0b1120]">
 
 
-        <p className="text-lg text-white/70 max-w-3xl mx-auto mb-10">
-          Building the intelligent security layer of Web3 with real-time AI monitoring,
-          predictive exploit detection and enterprise-grade risk analytics.
-        </p>
+  <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
+    AI-Powered Web3 Risk Intelligence Infrastructure
+  </h1>
 
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-6">
+  <p className="text-lg text-white/70 max-w-3xl mx-auto mb-10">
+    Building the intelligent security layer of Web3 with real-time AI monitoring,
+    predictive exploit detection and enterprise-grade risk analytics.
+  </p>
 
 
-  <Link
-    to="/whitepaper"
-    className="min-w-[220px] text-center bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
-  >
-    View Investor Whitepaper
-  </Link>
+  <div className="mt-8 flex flex-col sm:flex-row gap-6 justify-center items-center">
 
 
-  <a
-    href="https://neurosparkai-demo.vercel.app"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="min-w-[220px] text-center bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-cyan-400/30"
-  >
-    Try Live AI Demo
-  </a>
+    <a
+      href="/whitepaper"
+      className="inline-block min-w-[220px] text-center bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
+    >
+      View Investor Whitepaper
+    </a>
 
 
-</div>
+    <a
+      href="https://neurosparkai-demo.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block min-w-[220px] text-center bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-cyan-400/30"
+    >
+      Try Live AI Demo
+    </a>
 
+
+  </div>
+
+
+</section>
 
         {/* TRUST METRICS */}
         <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto text-white/80">
@@ -89,120 +93,14 @@ function Home() {
             <p>Built on BNB Smart Chain</p>
           </div>
         </div>
-      </section>
+      
 
 
       {/* TOKENOMICS */}
-      <section style={{
-  padding: "120px 20px",
-  background: "linear-gradient(180deg, #0f172a, #0b1120)"
-}}>
-  <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-    
-    <h2 style={{
-      fontSize: "40px",
-      fontWeight: "bold",
-      marginBottom: "60px"
-    }}>
-      Tokenomics
-    </h2>
-
-
-    <div style={{
-      background: "#111827",
-      padding: "50px",
-      borderRadius: "20px",
-      boxShadow: "0 0 40px rgba(0,0,0,0.6)"
-    }}>
-
-
-      {/* Presale */}
-      <div style={{ marginBottom: "50px", textAlign: "left" }}>
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: "12px",
-          fontSize: "18px"
-        }}>
-          <span>Presale Allocation</span>
-          <span style={{ color: "#22c55e", fontWeight: "bold" }}>20%</span>
-        </div>
-
-
-        <div style={{
-          width: "100%",
-          height: "24px",
-          background: "#1f2937",
-          borderRadius: "20px",
-          overflow: "hidden"
-        }}>
-          <div style={{
-            width: "20%",
-            height: "100%",
-            background: "linear-gradient(90deg,#22c55e,#16a34a)"
-          }}></div>
-        </div>
-      </div>
-
-
-      {/* TokenLock */}
-      <div style={{ textAlign: "left" }}>
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: "12px",
-          fontSize: "18px"
-        }}>
-          <span>TokenLock Vesting</span>
-          <span style={{ color: "#3b82f6", fontWeight: "bold" }}>80%</span>
-        </div>
-
-
-        <div style={{
-          width: "100%",
-          height: "24px",
-          background: "#1f2937",
-          borderRadius: "20px",
-          overflow: "hidden"
-        }}>
-          <div style={{
-            width: "80%",
-            height: "100%",
-            background: "linear-gradient(90deg,#3b82f6,#2563eb)"
-          }}></div>
-        </div>
-      </div>
-
-
-      {/* Details */}
-      <div style={{
-        marginTop: "60px",
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
-        gap: "30px",
-        textAlign: "center"
-      }}>
-        <div>
-          <p style={{ fontSize: "28px", fontWeight: "bold", color: "#22c55e" }}>500M</p>
-          <p style={{ opacity: 0.6 }}>Total Supply</p>
-        </div>
-
-
-        <div>
-          <p style={{ fontSize: "28px", fontWeight: "bold", color: "#22c55e" }}>BNB</p>
-          <p style={{ opacity: 0.6 }}>Network</p>
-        </div>
-
-
-        <div>
-          <p style={{ fontSize: "28px", fontWeight: "bold", color: "#22c55e" }}>No Mint</p>
-          <p style={{ opacity: 0.6 }}>Immutable Supply</p>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
+<section className="py-24 px-6 bg-[#0f172a] text-white text-center">
+  <h2 className="text-3xl font-bold mb-8">Tokenomics</h2>
+  <p className="text-lg text-white/70">Total Supply: 500M NSP</p>
+  <p className="text-lg text-white/70 mt-4">Built on BNB Smart Chain</p>
 </section>
 
 
