@@ -46,23 +46,24 @@ function Home() {
         </p>
 
 
-        <div className="flex justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 mt-4">
   <Link
-    to="/whitepaper"
-    className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
-  >
-    View Investor Whitepaper
-  </Link>
+  to="/whitepaper"
+  className="min-w-[220px] bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
+>
+  View Investor Whitepaper
+</Link>
 
 
   <a
-    href="https://neurosparkai-demo.vercel.app"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-cyan-400/30"
-  >
-    Try Live AI Demo
-  </a>
+  href="https://neurosparkai-demo.vercel.app"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="min-w-[220px] bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-cyan-400/30"
+>
+  Try Live AI Demo
+</a>
+
 </div>
 
 
