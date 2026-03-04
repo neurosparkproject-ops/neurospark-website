@@ -81,6 +81,33 @@ function Home() {
 
 </div>
 
+{/* AI DASHBOARD SECTION */}
+
+
+<div className="mt-24 text-center">
+
+
+<h2 className="text-3xl font-bold mb-6">
+AI Risk Intelligence Dashboard
+</h2>
+
+
+<p className="text-white/70 max-w-2xl mx-auto">
+NeuroSpark AI continuously scans smart contracts,
+DeFi protocols and blockchain activity to identify
+potential exploits before they happen.
+</p>
+
+
+<img
+  src={dashboard}
+  alt="AI Security Dashboard"
+  className="rounded-xl shadow-lg mx-auto mt-10"
+/>
+
+
+</div>
+
         {/* TRUST METRICS */}
         <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto text-white/80">
           <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
