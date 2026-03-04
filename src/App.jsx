@@ -258,6 +258,93 @@ All token locks and vesting contracts are publicly verifiable on BscScan.
   </div>
 </section>
 
+      {/* ROADMAP */}
+<section id="roadmap" className="py-20 bg-black text-white">
+<div className="max-w-5xl mx-auto px-6">
+
+
+<h2 className="text-4xl font-bold text-center mb-12">
+NeuroSpark AI Development Roadmap
+</h2>
+
+
+<div className="space-y-10">
+
+
+<div>
+<h3 className="text-xl font-semibold text-cyan-400">
+Phase 1 — Foundation (Q1 2026)
+</h3>
+<ul className="list-disc ml-6 mt-2 text-gray-300">
+<li>NeuroSpark AI concept development</li>
+<li>Core smart contract architecture</li>
+<li>NSP Token creation</li>
+<li>TokenLock & Vesting smart contract deployment</li>
+<li>Official website launch</li>
+<li>Social channels launch (X, Telegram, YouTube)</li>
+</ul>
+</div>
+
+
+<div>
+<h3 className="text-xl font-semibold text-cyan-400">
+Phase 2 — Ecosystem Launch (Q2 2026)
+</h3>
+<ul className="list-disc ml-6 mt-2 text-gray-300">
+<li>NSP token presale</li>
+<li>Smart contract security review</li>
+<li>Community growth campaign</li>
+<li>Initial exploit analysis content series</li>
+<li>AI risk detection model research</li>
+</ul>
+</div>
+
+
+<div>
+<h3 className="text-xl font-semibold text-cyan-400">
+Phase 3 — AI Risk Engine (Q3 2026)
+</h3>
+<ul className="list-disc ml-6 mt-2 text-gray-300">
+<li>AI-powered smart contract monitoring prototype</li>
+<li>Exploit pattern detection research</li>
+<li>DeFi protocol risk scoring framework</li>
+<li>Developer documentation preparation</li>
+</ul>
+</div>
+
+
+<div>
+<h3 className="text-xl font-semibold text-cyan-400">
+Phase 4 — Beta Platform (Q4 2026)
+</h3>
+<ul className="list-disc ml-6 mt-2 text-gray-300">
+<li>NeuroSpark AI dashboard beta release</li>
+<li>Real-time blockchain anomaly detection testing</li>
+<li>Early protocol integrations</li>
+<li>Community testing program</li>
+</ul>
+</div>
+
+
+<div>
+<h3 className="text-xl font-semibold text-cyan-400">
+Phase 5 — Ecosystem Expansion (2027)
+</h3>
+<ul className="list-disc ml-6 mt-2 text-gray-300">
+<li>AI risk intelligence platform launch</li>
+<li>Web3 protocol integrations</li>
+<li>Advanced exploit detection models</li>
+<li>Security partner collaborations</li>
+</ul>
+</div>
+
+
+</div>
+
+
+</div>
+</section>
+
       {/* VERIFIED CONTRACTS */}
 <section className="px-6 py-28 max-w-6xl mx-auto">
 
