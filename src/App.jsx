@@ -61,14 +61,14 @@ function Home() {
     <Link
       to="/whitepaper"
       className="min-w-[220px] bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
-    >
-      View Investor Whitepaper
+  >
+    View Investor Whitepaper
     </Link>
   </div>
 
-
   <div>
     <a
+
       href="https://neurosparkai-demo.vercel.app"
       target="_blank"
       rel="noopener noreferrer"
@@ -77,6 +77,9 @@ function Home() {
       Try Live AI Demo
     </a>
   </div>
+
+</div>
+
         {/* TRUST METRICS */}
         <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto text-white/80">
           <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
