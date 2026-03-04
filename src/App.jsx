@@ -3,6 +3,19 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Whitepaper from "./pages/Whitepaper";
 import dashboard from "./assets/dashboard.png";
+import { PieChart, Pie, Cell, Tooltip,
+ResponsiveContainer } from "recharts";
+
+const tokenomicsData = [
+  { name: "Presale", value: 20 },
+  { name: "Liquidity", value: 30 },
+  { name: "Ecosystem", value: 25 },
+  { name: "Team & Development", value: 15 },
+  { name: "Marketing", value: 10 }
+];
+
+
+const COLORS = ["#22c55e", "#06b6d4", "#3b82f6", "#6366f1", "#a855f7"];
 
 function Home() {
   return (
@@ -139,11 +152,54 @@ potential exploits before they happen.
   <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     
     {/* Grafik */}
-    <div className="relative w-64 h-64 mx-auto">
-      <div className="w-full h-full rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-black font-bold text-xl">
-        100%
-      </div>
-    </div>
+
+    <div className="mt-12 flex justify-center">
+
+
+<div style={{ width: 400, height: 300 }}>
+
+
+<ResponsiveContainer>
+
+
+<PieChart>
+
+
+<Pie
+data={tokenomicsData}
+cx="50%"
+cy="50%"
+outerRadius={100}
+dataKey="value"
+label
+>
+
+
+{tokenomicsData.map((entry, index) => (
+
+
+<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+
+
+))}
+
+
+</Pie>
+
+
+<Tooltip />
+
+
+</PieChart>
+
+
+</ResponsiveContainer>
+
+
+</div>
+
+
+</div>
 
 
     {/* Dağılım */}
