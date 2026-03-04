@@ -201,6 +201,41 @@ label
 
 </div>
 
+<div className="mt-10 space-y-6 text-left max-w-xl mx-auto">
+
+
+<h3 className="text-xl font-semibold text-cyan-400">Tokenomics Overview</h3>
+
+
+<p>
+<strong>20% Presale Allocation</strong><br/>
+Distributed during the public presale phase.
+</p>
+
+
+<p>
+<strong>80% Ecosystem & Development Reserve</strong><br/>
+Locked via TokenLockVesting smart contract to ensure long-term sustainability.
+</p>
+
+
+<h3 className="text-xl font-semibold text-cyan-400 mt-6">Vesting Mechanism</h3>
+
+
+<ul className="list-disc ml-6 space-y-2">
+<li>Initial <strong>6-month cliff</strong></li>
+<li><strong>5% monthly release schedule</strong></li>
+<li>Tokens support ecosystem growth, partnerships and protocol development</li>
+</ul>
+
+
+<p className="text-sm text-gray-400 mt-6">
+All token locks and vesting contracts are publicly verifiable on BscScan.
+</p>
+
+
+</div>
+
 
     {/* Dağılım */}
     <div className="space-y-6 text-left">
