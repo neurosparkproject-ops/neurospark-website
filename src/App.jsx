@@ -130,18 +130,26 @@ function Home() {
 </section>
 
       {/* VERIFIED CONTRACTS */}
-<section className="px-6 py-24 max-w-6xl mx-auto">
-  <h2 className="text-3xl font-bold mb-12 text-center">
-    Verified Smart Contracts
-  </h2>
+<section className="px-6 py-28 max-w-6xl mx-auto">
 
 
-  <div className="grid md:grid-cols-2 gap-8">
+  <div className="text-center mb-20">
+    <h2 className="text-4xl font-bold mb-4">
+      On-Chain Transparency
+    </h2>
+    <p className="text-white/50 max-w-2xl mx-auto">
+      All core contracts are publicly verified and accessible on BscScan.
+      Full transparency is a non-negotiable principle of NeuroSpark.
+    </p>
+  </div>
+
+
+  <div className="space-y-10">
 
 
     {[
       {
-        title: "Token Contract",
+        title: "NSP Token Contract",
         address: "0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe"
       },
       {
@@ -156,39 +164,66 @@ function Home() {
         title: "Unsold Manager",
         address: "0x04e8146Cc10885ADB1F604A3CfaC77917FD83534"
       }
-    ].map((contract, index) => (
-      <div key={index} className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
-        <h3 className="text-xl font-semibold mb-3">{contract.title}</h3>
+    ].map((contract, index) => {
 
 
-        <p className="text-white/60 text-sm mb-4 break-all">
-          {contract.address}
-        </p>
+      const shortAddress =
+        contract.address.slice(0, 8) +
+        "..." +
+        contract.address.slice(-6);
 
 
-        <div className="flex gap-4 text-sm">
-          <button
-            onClick={() => navigator.clipboard.writeText(contract.address)}
-            className="text-green-400 hover:underline"
-          >
-            Copy Address
-          </button>
+      return (
+        <div
+          key={index}
+          className="border border-white/10 p-8 rounded-2xl bg-white/[0.02] backdrop-blur-md hover:border-white/30 transition"
+        >
+          <div className="flex justify-between items-center flex-wrap gap-6">
 
 
-          <a
-            href={`https://bscscan.com/address/${contract.address}`}
-            target="_blank"
-            rel="noreferrer"
-            className="text-white/40 hover:text-white/70"
-          >
-            Verified on BscScan
-          </a>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {contract.title}
+              </h3>
+              <p className="text-white/60 font-mono">
+                {shortAddress}
+              </p>
+            </div>
+
+
+            <div className="flex gap-4">
+
+
+              <button
+                onClick={() => navigator.clipboard.writeText(contract.address)}
+                className="px-5 py-2 border border-white/20 rounded-lg hover:bg-white/10 transition"
+              >
+                Copy
+              </button>
+
+
+              <a
+                href={`https://bscscan.com/address/${contract.address}`}
+                target="_blank"
+                rel="noreferrer"
+                className="px-5 py-2 border border-white/20 rounded-lg hover:bg-white/10 transition"
+              >
+                BscScan
+              </a>
+
+
+            </div>
+
+
+          </div>
         </div>
-      </div>
-    ))}
+      );
+    })}
 
 
   </div>
+
+
 </section>
 
 
