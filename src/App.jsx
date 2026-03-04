@@ -2,7 +2,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Whitepaper from "./pages/Whitepaper";
-
+import dashboard from "./assets/dashboard.png";
 
 function Home() {
   return (
