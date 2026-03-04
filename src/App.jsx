@@ -143,6 +143,81 @@ potential exploits before they happen.
         
       </section>
 
+       {/* AI SECURITY ENGINE */}
+
+
+<section className="py-24 px-6 bg-[#020617] text-white">
+
+
+<div className="max-w-6xl mx-auto text-center">
+
+
+<h2 className="text-4xl font-bold mb-12">
+AI Security Engine
+</h2>
+
+
+<p className="text-gray-400 max-w-3xl mx-auto mb-16">
+NeuroSpark AI analyzes blockchain activity and smart contracts to identify 
+potential security risks, exploit patterns, and abnormal on-chain behavior.
+</p>
+
+
+<div className="grid md:grid-cols-2 gap-10 text-left">
+
+
+<div className="bg-white/5 p-6 rounded-xl border border-white/10">
+<h3 className="text-xl font-semibold text-cyan-400 mb-2">
+Real-Time Smart Contract Monitoring
+</h3>
+<p className="text-gray-400">
+AI continuously scans blockchain transactions to detect suspicious activity 
+and potential vulnerabilities.
+</p>
+</div>
+
+
+<div className="bg-white/5 p-6 rounded-xl border border-white/10">
+<h3 className="text-xl font-semibold text-cyan-400 mb-2">
+Exploit Pattern Detection
+</h3>
+<p className="text-gray-400">
+Machine learning models analyze historical exploits to identify attack patterns 
+before they cause damage.
+</p>
+</div>
+
+
+<div className="bg-white/5 p-6 rounded-xl border border-white/10">
+<h3 className="text-xl font-semibold text-cyan-400 mb-2">
+DeFi Risk Scoring
+</h3>
+<p className="text-gray-400">
+Protocols can receive AI-generated risk scores based on smart contract structure 
+and on-chain activity.
+</p>
+</div>
+
+
+<div className="bg-white/5 p-6 rounded-xl border border-white/10">
+<h3 className="text-xl font-semibold text-cyan-400 mb-2">
+AI-Driven Security Intelligence
+</h3>
+<p className="text-gray-400">
+NeuroSpark AI delivers data-driven insights that help developers and users 
+understand blockchain risks.
+</p>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
 
       {/* TOKENOMICS */}
 <section className="py-24 px-6 bg-[#0f172a] text-white text-center">
