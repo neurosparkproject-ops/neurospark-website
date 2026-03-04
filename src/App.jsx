@@ -48,31 +48,27 @@ function Home() {
   </p>
 
 
-  <div className="mt-8 flex flex-col sm:flex-row gap-6 justify-center items-center">
+  <div className="mt-10 flex flex-col justify-center items-center space-y-6">
+  
+  <a
+    href="/whitepaper"
+    className="w-[260px] text-center bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
+  >
+    View Investor Whitepaper
+  </a>
 
 
-    <a
-      href="/whitepaper"
-      className="inline-block min-w-[220px] text-center bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
-    >
-      View Investor Whitepaper
-    </a>
+  <a
+    href="https://neurosparkai-demo.vercel.app"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-[260px] text-center bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-cyan-400/30"
+  >
+    Try Live AI Demo
+  </a>
 
 
-    <a
-      href="https://neurosparkai-demo.vercel.app"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block min-w-[220px] text-center bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-cyan-400/30"
-    >
-      Try Live AI Demo
-    </a>
-
-
-  </div>
-
-
-</section>
+</div>
 
         {/* TRUST METRICS */}
         <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto text-white/80">
@@ -93,78 +89,107 @@ function Home() {
             <p>Built on BNB Smart Chain</p>
           </div>
         </div>
-      
+        
+      </section>
 
 
       {/* TOKENOMICS */}
 <section className="py-24 px-6 bg-[#0f172a] text-white text-center">
-  <h2 className="text-3xl font-bold mb-8">Tokenomics</h2>
-  <p className="text-lg text-white/70">Total Supply: 500M NSP</p>
-  <p className="text-lg text-white/70 mt-4">Built on BNB Smart Chain</p>
+  <h2 className="text-3xl font-bold mb-12">Tokenomics</h2>
+
+
+  <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    {/* Grafik */}
+    <div className="relative w-64 h-64 mx-auto">
+      <div className="w-full h-full rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center text-black font-bold text-xl">
+        100%
+      </div>
+    </div>
+
+
+    {/* Dağılım */}
+    <div className="space-y-6 text-left">
+      
+      <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+        <p className="text-green-400 text-xl font-bold">20% Presale</p>
+        <p className="text-white/60 mt-2">Public token distribution phase</p>
+      </div>
+
+
+      <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+        <p className="text-cyan-400 text-xl font-bold">80% TokenLock & Vesting</p>
+        <p className="text-white/60 mt-2">Long-term ecosystem sustainability</p>
+      </div>
+
+
+    </div>
+
+
+  </div>
 </section>
 
-
       {/* VERIFIED CONTRACTS */}
-      <section className="px-6 py-24 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">
-          Verified Smart Contracts
-        </h2>
+<section className="px-6 py-24 max-w-6xl mx-auto">
+  <h2 className="text-3xl font-bold mb-12 text-center">
+    Verified Smart Contracts
+  </h2>
 
 
-        <div className="grid md:grid-cols-2 gap-8">
+  <div className="grid md:grid-cols-2 gap-8">
 
 
-          {[
-            {
-              title: "Token Contract",
-              address: "0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe"
-            },
-            {
-              title: "Presale Contract",
-              address: "0xAd14070Ace343194a758BCC3E29bE67424E1144A"
-            },
-            {
-              title: "TokenLock Vesting",
-              address: "0x1683c88D0E65a0eC824Fdea01D858E8506912231"
-            },
-            {
-              title: "Unsold Manager",
-              address: "0x04e8146Cc10885ADB1F604A3CfaC77917FD83534"
-            }
-          ].map((contract, index) => (
-            <div key={index} className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
-              <h3 className="text-xl font-semibold mb-3">{contract.title}</h3>
+    {[
+      {
+        title: "Token Contract",
+        address: "0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe"
+      },
+      {
+        title: "Presale Contract",
+        address: "0xAd14070Ace343194a758BCC3E29bE67424E1144A"
+      },
+      {
+        title: "TokenLock Vesting",
+        address: "0x1683c88D0E65a0eC824Fdea01D858E8506912231"
+      },
+      {
+        title: "Unsold Manager",
+        address: "0x04e8146Cc10885ADB1F604A3CfaC77917FD83534"
+      }
+    ].map((contract, index) => (
+      <div key={index} className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
+        <h3 className="text-xl font-semibold mb-3">{contract.title}</h3>
 
 
-              <p className="text-white/60 text-sm mb-4 break-all">
-                {contract.address}
-              </p>
+        <p className="text-white/60 text-sm mb-4 break-all">
+          {contract.address}
+        </p>
 
 
-              <div className="flex gap-4 text-sm">
-                <button
-                  onClick={() => navigator.clipboard.writeText(contract.address)}
-                  className="text-green-400 hover:underline"
-                >
-                  Copy Address
-                </button>
+        <div className="flex gap-4 text-sm">
+          <button
+            onClick={() => navigator.clipboard.writeText(contract.address)}
+            className="text-green-400 hover:underline"
+          >
+            Copy Address
+          </button>
 
 
-                <a
-                  href={`https://bscscan.com/address/${contract.address}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/40 hover:text-green-400 transition"
-                >
-                  Verified on BscScan
-                </a>
-              </div>
-            </div>
-          ))}
-
-
+          <a
+            href={`https://bscscan.com/address/${contract.address}`}
+            target="_blank"
+            rel="noreferrer"
+            className="text-white/40 hover:text-white/70"
+          >
+            Verified on BscScan
+          </a>
         </div>
-      </section>
+      </div>
+    ))}
+
+
+  </div>
+</section>
 
 
   {/* FOOTER */}
