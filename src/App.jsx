@@ -27,8 +27,14 @@ function Home() {
 
 
         <div className="flex gap-8 text-white/80 font-medium">
-          <Link to="/" className="hover:text-green-400 transition">Home</Link>
-          <Link to="/whitepaper" className="hover:text-green-400 transition">Whitepaper</Link>
+          <Link to="/" className="hover:text-green-400 transition">
+            Home
+          </Link>
+
+          <Link to="/whitepaper" className="hover:text-green-400 transition">
+          Whitepaper
+          </Link>
+
         </div>
       </nav>
 
