@@ -48,7 +48,7 @@ function Home() {
   </p>
 
 
-  <div className="flex flex-col gap-4 items-center">
+  <div className="flex flex-col gap-4 items-start mt-6">
 
 
 <Link
