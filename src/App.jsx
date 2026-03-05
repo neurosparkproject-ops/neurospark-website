@@ -123,6 +123,58 @@ Whitepaper
 
 </div>
 
+
+{/* SECURITY PARTNERS */}
+
+
+<section className="py-16 bg-[#020617] text-white">
+
+
+<div className="max-w-6xl mx-auto px-6 text-center">
+
+
+<p className="text-gray-400 mb-8 uppercase tracking-widest text-sm">
+Powered by Web3 Security Intelligence
+</p>
+
+
+<div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-gray-300 text-lg font-semibold">
+
+
+<div className="opacity-70 hover:opacity-100 transition">
+BNB Chain
+</div>
+
+
+<div className="opacity-70 hover:opacity-100 transition">
+BscScan
+</div>
+
+
+<div className="opacity-70 hover:opacity-100 transition">
+AI Detection
+</div>
+
+
+<div className="opacity-70 hover:opacity-100 transition">
+Smart Contract Monitoring
+</div>
+
+
+<div className="opacity-70 hover:opacity-100 transition">
+Blockchain Intelligence
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
 {/* AI DASHBOARD SECTION */}
 
 
