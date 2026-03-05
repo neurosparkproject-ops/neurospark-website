@@ -41,15 +41,39 @@ function Home() {
 
 
         <div className="flex gap-8 text-white/80 font-medium">
-          <Link to="/" className="hover:text-green-400 transition">
-            Home
-          </Link>
 
-          <Link to="/whitepaper" className="hover:text-green-400 transition">
-          Whitepaper
-          </Link>
 
-        </div>
+<Link to="/" className="hover:text-green-400 transition">
+Home
+</Link>
+
+
+<a href="#engine" className="hover:text-green-400 transition">
+AI Engine
+</a>
+
+
+<a href="#tokenomics" className="hover:text-green-400 transition">
+Tokenomics
+</a>
+
+
+<a href="#roadmap" className="hover:text-green-400 transition">
+Roadmap
+</a>
+
+
+<a href="#contracts" className="hover:text-green-400 transition">
+Contracts
+</a>
+
+
+<Link to="/whitepaper" className="hover:text-green-400 transition">
+Whitepaper
+</Link>
+
+
+</div>
       </nav>
 
 
@@ -146,7 +170,7 @@ potential exploits before they happen.
        {/* AI SECURITY ENGINE */}
 
 
-<section className="py-24 px-6 bg-[#020617] text-white">
+<section id="engine" className="py-24 px-6 bg-[#020617] text-white">
 
 
 <div className="max-w-6xl mx-auto text-center">
@@ -220,7 +244,7 @@ understand blockchain risks.
 
 
       {/* TOKENOMICS */}
-<section className="py-24 px-6 bg-[#0f172a] text-white text-center">
+<section id="tokenomics" className="py-24 px-6 bg-[#0f172a] text-white text-center">
   <h2 className="text-3xl font-bold mb-12">Tokenomics</h2>
 
 
@@ -421,7 +445,7 @@ Phase 5 — Ecosystem Expansion (2027)
 </section>
 
       {/* VERIFIED CONTRACTS */}
-<section className="px-6 py-28 max-w-6xl mx-auto">
+<section id="contracts" className="px-6 py-28 max-w-6xl mx-auto">
 
 
   <div className="text-center mb-20">
