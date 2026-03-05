@@ -30,6 +30,25 @@ function Home() {
   }}
 >
 
+
+{/* LIVE THREAT FEED */}
+
+
+<div className="w-full bg-red-500 text-black text-sm py-2 overflow-hidden">
+
+
+<div className="whitespace-nowrap animate-pulse text-center font-semibold">
+
+
+⚠ Live Threat Feed — $1.8M Exploit detected on BNB Chain — AI monitoring active — NeuroSpark Security Engine
+
+
+</div>
+
+
+</div>
+
+
       {/* NAVBAR */}
       <nav className="flex justify-between items-center px-10 py-6 border-b border-white/10 backdrop-blur-md bg-[#0b1120]/80 sticky top-0 z-50">
         <div className="flex items-center gap-3">
