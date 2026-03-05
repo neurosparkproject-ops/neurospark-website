@@ -68,6 +68,11 @@ Contracts
 </a>
 
 
+<a href="#exploits" className="hover:text-green-400 transition">
+Exploit Tracker
+</a>
+
+
 <Link to="/whitepaper" className="hover:text-green-400 transition">
 Whitepaper
 </Link>
@@ -246,7 +251,7 @@ understand blockchain risks.
 {/* EXPLOIT TRACKER */}
 
 
-<section className="py-24 px-6 bg-[#020617] text-white">
+<section id="exploits" className="py-24 px-6 bg-[#020617] text-white">
 
 
 <div className="max-w-6xl mx-auto">
