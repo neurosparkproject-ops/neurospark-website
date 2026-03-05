@@ -243,6 +243,64 @@ understand blockchain risks.
 </section>
 
 
+{/* EXPLOIT TRACKER */}
+
+
+<section className="py-24 px-6 bg-[#020617] text-white">
+
+
+<div className="max-w-6xl mx-auto">
+
+
+<h2 className="text-4xl font-bold text-center mb-12">
+Live Exploit Tracker
+</h2>
+
+
+<p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
+NeuroSpark AI continuously monitors blockchain activity to detect suspicious
+transactions, abnormal contract behavior, and potential exploit patterns.
+</p>
+
+
+<div className="grid md:grid-cols-3 gap-8">
+
+
+<div className="bg-white/5 border border-white/10 rounded-xl p-6">
+<p className="text-red-400 font-bold text-lg">$1.8M Exploit</p>
+<p className="text-white mt-2">DeFi Lottery Protocol</p>
+<p className="text-gray-400 text-sm mt-2">
+Flash loan manipulation detected in smart contract reward logic.
+</p>
+</div>
+
+
+<div className="bg-white/5 border border-white/10 rounded-xl p-6">
+<p className="text-red-400 font-bold text-lg">$2.3M Bridge Attack</p>
+<p className="text-white mt-2">Cross-chain Bridge</p>
+<p className="text-gray-400 text-sm mt-2">
+Unauthorized validator signature used to drain bridge liquidity.
+</p>
+</div>
+
+
+<div className="bg-white/5 border border-white/10 rounded-xl p-6">
+<p className="text-yellow-400 font-bold text-lg">$900K Vulnerability</p>
+<p className="text-white mt-2">DeFi Lending Protocol</p>
+<p className="text-gray-400 text-sm mt-2">
+Reentrancy pattern detected during collateral withdrawal.
+</p>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
       {/* TOKENOMICS */}
 <section id="tokenomics" className="py-24 px-6 bg-[#0f172a] text-white text-center">
   <h2 className="text-3xl font-bold mb-12">Tokenomics</h2>
