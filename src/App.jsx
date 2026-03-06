@@ -109,6 +109,11 @@ AI Engine
 </a>
 
 
+<a href="#attackmap" className="hover:text-green-400 transition">
+Attack Map
+</a>
+
+
 <a href="#tokenomics" className="hover:text-green-400 transition">
 Tokenomics
 </a>
