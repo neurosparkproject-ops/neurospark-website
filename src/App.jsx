@@ -180,6 +180,31 @@ Whitepaper
 </div>
 
 
+{/* GLOBAL ATTACK MAP */}
+
+
+<section id="attackmap" className="px-10 py-20">
+
+
+<h2 className="text-3xl font-bold text-center mb-10">
+🌍 Global Web3 Attack Monitoring
+</h2>
+
+
+<div className="flex justify-center">
+
+
+<img 
+src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+alt="Attack Map"
+className="opacity-80"
+/>
+
+
+</div>
+
+
+
 {/* SECURITY PARTNERS */}
 
 
