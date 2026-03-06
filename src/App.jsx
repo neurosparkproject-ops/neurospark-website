@@ -87,64 +87,46 @@ function Home() {
 
 
       {/* NAVBAR */}
-      <nav className="flex justify-between items-center px-10 py-6 border-b border-white/10 backdrop-blur-md bg-[#0b1120]/80 sticky top-0 z-50">
-        <div className="flex items-center gap-3">
-          <img src="/logo.png" alt="logo" className="h-12 w-12 object-contain" />
-          <span className="text-2xl font-bold tracking-wide">
-            NeuroSpark <span className="text-green-400">(NSP)</span>
-          </span>
-        </div>
 
 
-        <div className="flex gap-8 text-white/80 font-medium">
+<nav className="w-full h-20 px-10 border-b border-white/10 backdrop-blur-md bg-[#0b1120]/90 flex items-center justify-between">
 
 
-<Link to="/" className="hover:text-green-400 transition">
-Home
-</Link>
+<div className="flex items-center gap-3">
 
 
-<a href="#engine" className="hover:text-green-400 transition">
-AI Engine
-</a>
+<img src="/logo.png" alt="logo" className="h-10 w-10 object-contain" />
 
 
-<a href="#attackmap" className="hover:text-green-400 transition">
-Attack Map
-</a>
-
-
-<a href="#tokenomics" className="hover:text-green-400 transition">
-Tokenomics
-</a>
-
-
-<a href="#roadmap" className="hover:text-green-400 transition">
-Roadmap
-</a>
-
-
-<a href="#contracts" className="hover:text-green-400 transition">
-Contracts
-</a>
-
-
-<a href="#exploits" className="hover:text-green-400 transition">
-Exploit Tracker
-</a>
-
-
-<Link to="/whitepaper" className="hover:text-green-400 transition">
-Whitepaper
-</Link>
+<span className="text-2xl font-bold tracking-wide">
+NeuroSpark <span className="text-green-400">(NSP)</span>
+</span>
 
 
 </div>
-      </nav>
+
+
+<div className="flex gap-6 text-sm text-white/80 font-medium">
+
+
+<a href="#">Home</a>
+<a href="#engine">AI Engine</a>
+<a href="#attackmap">Attack Map</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#contracts">Contracts</a>
+<a href="#exploits">Exploit Tracker</a>
+<a href="/whitepaper">Whitepaper</a>
+
+
+</div>
+
+
+</nav>
 
 
       {/* HERO */}
-<section className="text-center px-6 py-28 bg-gradient-to-b from-[#0b1120] via-[#111827] to-[#0b1120]">
+<section className="text-center px-6 py-28 pt-32 bg-gradient-to-b from-[#0b1120] via-[#111827] to-[#0b1120]">
 
 
   <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
