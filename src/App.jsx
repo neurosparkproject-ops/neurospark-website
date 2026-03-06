@@ -17,6 +17,40 @@ const tokenomicsData = [
 
 const COLORS = ["#22c55e", "#06b6d4", "#3b82f6", "#6366f1", "#a855f7"];
 
+<style>
+{`
+@keyframes threat-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+.animate-threat {
+  display: inline-block;
+  white-space: nowrap;
+  animation: threat-scroll 20s linear infinite;
+}
+
+
+.live-dot {
+  display:inline-block;
+  width:10px;
+  height:10px;
+  background:red;
+  border-radius:50%;
+  margin-right:8px;
+  animation:blink 1s infinite;
+}
+
+
+@keyframes blink {
+  0%{opacity:1;}
+  50%{opacity:0.3;}
+  100%{opacity:1;}
+}
+`}
+</style>
+
 function Home() {
   return (
     <div
@@ -37,14 +71,13 @@ function Home() {
 <div className="w-full bg-red-500 text-black text-sm py-2 overflow-hidden">
 
 
-<div className="whitespace-nowrap animate-pulse text-center font-semibold">
+<div className="animate-threat font-semibold flex items-center gap-3">
 
+<span className="live-dot"></span>
 
-⚠ Live Threat Feed — $1.8M Exploit detected on BNB Chain — AI monitoring active — NeuroSpark Security Engine
-
+LIVE Threat Feed — $1.8M Exploit detected on BNB Chain — AI monitoring active — NeuroSpark Security Engine —
 
 </div>
-
 
 </div>
 
