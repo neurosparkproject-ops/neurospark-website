@@ -205,8 +205,15 @@ alt="Attack Map"
 className="opacity-80"
 />
 
-
 </div>
+
+
+<p className="text-center mt-6 text-white/70">
+Real-time AI monitoring of suspicious smart contract activity across global blockchain networks.
+</p>
+
+
+</section>
 
 
 
