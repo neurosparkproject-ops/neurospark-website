@@ -71,15 +71,19 @@ function Home() {
 <div className="w-full bg-red-500 text-black text-sm py-2 overflow-hidden">
 
 
-<div className="animate-threat font-semibold flex items-center gap-3">
+<marquee className="font-semibold">
 
-<span className="live-dot"></span>
 
-LIVE Threat Feed — $1.8M Exploit detected on BNB Chain — AI monitoring active — NeuroSpark Security Engine —
+🔴 LIVE Threat Feed — $1.8M Exploit detected on BNB Chain — AI monitoring active — NeuroSpark Security Engine —
+
+
+</marquee>
+
 
 </div>
 
-</div>
+
+
 
 
       {/* NAVBAR */}
