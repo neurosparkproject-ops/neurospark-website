@@ -27,9 +27,17 @@ export default function Whitepaper() {
           </p>
 
 
-          <button className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition">
-            Download Full PDF
-          </button>
+          <button
+  onClick={() => {
+    const link = document.createElement("a");
+    link.href = "/whitepaper.pdf";
+    link.download = "whitepaper.pdf";
+    link.click();
+  }}
+  className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition"
+>
+  Download Full PDF
+</button>
         </div>
 
 
