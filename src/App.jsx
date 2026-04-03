@@ -869,7 +869,7 @@ export default function App() {
 
 <button
   onClick={() => {
-    fetch("https://script.google.com/macros/s/AKfycbyZ0upPZgsyjJejDv1MOtFR6Ex9IxHe3_rQQ3iBbw_03zHjmvlorv8GOIjXMF9B6d0N/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbw3RLOPat4KLt2haBns3TfbmavOjYBNSNp3y33I7FZZttTSl7S1I-u7wznTjaXaWvir/exec", {
       method: "POST",
       body: new URLSearchParams({ 
        email:email
