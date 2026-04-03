@@ -871,6 +871,9 @@ export default function App() {
   onClick={() => {
     fetch("https://script.google.com/macros/s/AKfycbyZ0upPZgsyjJejDv1MOtFR6Ex9IxHe3_rQQ3iBbw_03zHjmvlorv8GOIjXMF9B6d0N/exec", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }, 
       body: JSON.stringify({ email }),
     });
     setShowPopup(false);
