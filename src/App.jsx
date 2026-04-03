@@ -1,5 +1,6 @@
 // update
 import React from "react";
+import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Whitepaper from "./pages/Whitepaper";
 import dashboard from "./assets/dashboard.png";
@@ -827,7 +828,10 @@ Phase 5 — Ecosystem Expansion (2027)
 
 
 export default function App() {
-  return (
+  const [showPopup, setShowPopup] =
+useState(false);
+
+return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/whitepaper" element={<Whitepaper />} />
