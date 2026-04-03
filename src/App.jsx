@@ -831,7 +831,7 @@ Phase 5 — Ecosystem Expansion (2027)
 
 export default function App() {
   const [showPopup, setShowPopup] = useState(false);
-
+  const [email, setEmail] = useState(""); 
 
   return (
     <>
@@ -854,15 +854,32 @@ export default function App() {
               Upgrade to unlock detailed contract risk analysis, wallet tracking and AI insights.
             </p>
 
-
-            <button
-              onClick={() => setShowPopup(false)}
-              className="bg-green-500 px-5 py-2 rounded-lg"
-            >
-              Close
-            </button>
+            <p className="text-white/70 mb-6">
+  Upgrade to unlock detailed contract risk analysis, wallet tracking and AI insights.
+</p>
 
 
+<input
+  type="email"
+  placeholder="Enter your email"
+  className="w-full px-4 py-2 rounded-lg mb-4 text-black"
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
+
+<button
+  onClick={() => {
+    fetch("https://script.google.com/macros/s/AKfycbyZ0upPZgsyjJejDv1MOtFR6Ex9IxHe3_rQQ3iBbw_03zHjmvlorv8GOIjXMF9B6d0N/exec", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+    });
+    setShowPopup(false);
+  }}
+  className="bg-green-500 px-5 py-2 rounded-lg"
+>
+  Unlock Access
+</button>
+            
           </div>
         </div>
       )}
