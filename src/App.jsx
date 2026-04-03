@@ -287,7 +287,33 @@ AI Risk Intelligence Dashboard
 
 </div>
 
-        {/* TRUST METRICS */}
+ <div className="mt-20 max-w-4xl mx-auto text-center">
+  <h3 className="text-2xl font-bold mb-6">
+    Why traders use NeuroSpark
+  </h3>
+
+
+  <div className="grid md:grid-cols-3 gap-6 text-sm text-white/80">
+    <div>
+      ⚠️ Avoid rug pulls before they happen
+    </div>
+    <div>
+      🔍 Detect hidden contract risks instantly
+    </div>
+    <div>
+      🧠 Make smarter trading decisions with AI
+    </div>
+  </div>
+
+<div className="mt-12 text-center">
+  <button className="bg-green-500 px-6 py-3 rounded-xl font-semibold">
+    Unlock Full AI Analysis
+  </button>
+</div>
+
+</div>
+
+       {/* TRUST METRICS */}
         <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto text-white/80">
           <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
             <p className="text-3xl font-bold text-green-400">4</p>
