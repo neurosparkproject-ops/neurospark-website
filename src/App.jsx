@@ -52,7 +52,7 @@ const COLORS = ["#22c55e", "#06b6d4", "#3b82f6", "#6366f1", "#a855f7"];
 `}
 </style>
 
-function Home() {
+function Home({ setShowPopup }) {
   return (
     <div
   className="min-h-screen text-white"
@@ -836,7 +836,7 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home  setShowPopup={setShowPopup} />} />
         <Route path="/whitepaper" element={<Whitepaper />} />
       </Routes>
 
