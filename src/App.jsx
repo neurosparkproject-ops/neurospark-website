@@ -268,11 +268,16 @@ potential exploits before they happen.
 </p>
 
 
-<img
-  src={dashboard}
-  alt="AI Security Dashboard"
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
   className="rounded-xl shadow-lg mx-auto mt-10"
-/>
+  style={{ maxWidth: "900px", width: "100%" }}
+>
+  <source src="/demo.mp4" type="video/mp4" />
+</video>
 
 
 </div>
