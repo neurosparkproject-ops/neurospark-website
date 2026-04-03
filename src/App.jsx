@@ -262,9 +262,14 @@ AI Risk Intelligence Dashboard
 
 
 <p className="text-white/70 max-w-2xl mx-auto">
-NeuroSpark AI continuously scans smart contracts,
-DeFi protocols and blockchain activity to identify
-potential exploits before they happen.
+  NeuroSpark AI continuously scans smart contracts,
+  DeFi protocols and blockchain activity to identify
+  potential exploits before they happen.
+</p>
+
+
+<p className="text-green-400 mt-4 text-sm tracking-wide">
+  ● Live AI Demo
 </p>
 
 
