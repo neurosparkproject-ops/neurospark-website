@@ -307,7 +307,9 @@ AI Risk Intelligence Dashboard
   </div>
 
 <div className="mt-12 text-center">
-  <button className="bg-green-500 px-6 py-3 rounded-xl font-semibold">
+  <button
+onClick={() => setShowPopup(true)}
+className="bg-green-500 px-6 py-3 rounded-xl font-semibold">
     Unlock Full AI Analysis
   </button>
 </div>
@@ -828,13 +830,44 @@ Phase 5 — Ecosystem Expansion (2027)
 
 
 export default function App() {
-  const [showPopup, setShowPopup] =
-useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/whitepaper" element={<Whitepaper />} />
-    </Routes>
+
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/whitepaper" element={<Whitepaper />} />
+      </Routes>
+
+
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+          <div className="bg-[#0b1120] p-8 rounded-xl text-center max-w-md w-full border border-white/10">
+            
+            <h2 className="text-xl font-bold mb-4">
+              Full AI Analysis Locked
+            </h2>
+
+
+            <p className="text-white/70 mb-6">
+              Upgrade to unlock detailed contract risk analysis, wallet tracking and AI insights.
+            </p>
+
+
+            <button
+              onClick={() => setShowPopup(false)}
+              className="bg-green-500 px-5 py-2 rounded-lg"
+            >
+              Close
+            </button>
+
+
+          </div>
+        </div>
+      )}
+
+
+    </>
   );
 }
