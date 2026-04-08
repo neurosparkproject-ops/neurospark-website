@@ -111,6 +111,9 @@ h1 {
 ⚡ 8 joined in last hour
 </p>
 
+<p id="totalCounter" style="color:#38bdf8; margin-top:6px;">
+👛 128 wallets joined whitelist
+</p>
 
 <div class="card">
 <h3>💰 Presale Stages</h3>
@@ -234,6 +237,50 @@ function updateFakeStats() {
 
 setInterval(updateFakeStats, 5000);
 updateFakeStats();
+
+let total = localStorage.getItem("whitelistTotal");
+let lastVisit = localStorage.getItem("lastVisit");
+
+
+if (!total) {
+  total = 128;
+} else {
+  total = parseInt(total);
+}
+
+
+let now = Date.now();
+
+
+if (lastVisit) {
+  let diff = now - parseInt(lastVisit);
+  let extra = Math.floor(diff / (1000 * 60 * 30));
+  total += extra;
+}
+
+
+localStorage.setItem("whitelistTotal", total);
+localStorage.setItem("lastVisit", now);
+
+
+function updateTotal() {
+  if (Math.random() < 0.5) {
+    total += 1;
+  }
+
+
+  document.getElementById("totalCounter").innerText =
+    "👛 " + total + " wallets joined whitelist";
+
+
+  localStorage.setItem("whitelistTotal", total);
+}
+
+
+updateTotal();
+
+
+setInterval(updateTotal, Math.random() * 10000 + 10000);
 </script>
 
 
