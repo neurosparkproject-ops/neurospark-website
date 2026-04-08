@@ -98,8 +98,18 @@ h1 {
 
 
 <div class="timer" id="countdown">
-Loading countdown...
+  Loading countdown...
 </div>
+
+
+<p id="liveCounter" style="color:#facc15; margin-top:10px;">
+🔥 21 people viewing now
+</p>
+
+
+<p id="joinCounter" style="color:#22c55e; font-size:14px;">
+⚡ 8 joined in last hour
+</p>
 
 
 <div class="card">
@@ -148,8 +158,7 @@ onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJnWa80e2GMgCPu0
 
 <script>
 // ⏳ 15 gün countdown
-const targetDate = new Date();
-targetDate.setDate(targetDate.getDate() + 15);
+const targetDate = new Date("2026-04-23T18:00:00Z");
 
 
 function updateCountdown() {
@@ -169,6 +178,23 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+function updateFakeStats() {
+  const viewers = Math.floor(Math.random() * 15) + 18;
+  const joins = Math.floor(Math.random() * 10) + 5;
+
+
+  document.getElementById("liveCounter").innerText =
+    "🔥 " + viewers + " people viewing now";
+
+
+  document.getElementById("joinCounter").innerText =
+    "⚡ " + joins + " joined in last hour";
+}
+
+
+setInterval(updateFakeStats, 5000);
+updateFakeStats();
 </script>
 
 
