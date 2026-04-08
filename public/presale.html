@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuroSpark Presale</title>
+
+
+<style>
+body {
+  background: #0b1220;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+
+h1 {
+  font-size: 32px;
+}
+
+
+.highlight {
+  color: #facc15;
+}
+
+
+.card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+
+.timer {
+  font-size: 28px;
+  margin: 20px 0;
+  color: #facc15;
+}
+
+
+.progress {
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+
+.progress-bar {
+  width: 68%;
+  height: 12px;
+  background: #22c55e;
+}
+
+
+.button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: #22c55e;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.note {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🚀 NeuroSpark (NSP) Presale</h1>
+
+
+<p class="highlight">
+⚠️ Early Access Open — Public Sale Coming Soon
+</p>
+
+
+<div class="timer" id="countdown">
+Loading countdown...
+</div>
+
+
+<div class="card">
+<h3>💰 Presale Stages</h3>
+
+
+<p>Stage 1: $0.003</p>
+<p>Stage 2: $0.005</p>
+<p>Stage 3: $0.05</p>
+
+
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+
+
+<p class="note">Stage 1 filling fast</p>
+</div>
+
+
+<div class="card">
+<h3>⚠️ Limited Allocation</h3>
+
+
+<p>
+Early participants may receive better pricing and benefits.
+</p>
+
+
+<button class="button"
+onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJnWa80e2GMgCPu0RmyH0xRWxCRf-YaBMWIuhlCprGeXsdww/viewform', '_blank')">
+🚀 Secure Early Access Spot
+</button>
+
+
+<p class="note">
+⚠️ Whitelist spots are filling fast. Public sale will open soon.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+<script>
+// ⏳ 15 gün countdown
+const targetDate = new Date();
+targetDate.setDate(targetDate.getDate() + 15);
+
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = targetDate - now;
+
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+
+  document.getElementById("countdown").innerText =
+    days + "d " + hours + "h " + minutes + "m";
+}
+
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+
+</body>
+</html>
