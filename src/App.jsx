@@ -139,7 +139,7 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 
 <div className="flex flex-col md:flex-row gap-4 justify-center mt-6">
 
-        <a href="/presale"
+        <a href="/presale.html"
     className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg">
         🚀 Join Presale
       </a>
