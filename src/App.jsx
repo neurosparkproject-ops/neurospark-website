@@ -80,9 +80,7 @@ function Home({ setShowPopup }) {
 
 </marquee>
 
-
 </div>
-
 
 
 
@@ -117,7 +115,7 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 <a href="#roadmap">Roadmap</a>
 <a href="#contracts">Contracts</a>
 <a href="#exploits">Exploit Tracker</a>
-<Link to="/whitepaper">Whitepaper</Link>
+<a href="/whitepaper">Whitepaper</a>
 
 
 </div>
@@ -130,42 +128,39 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 <section className="text-center px-6 py-28 pt-32 bg-gradient-to-b from-[#0b1120] via-[#111827] to-[#0b1120]">
 
 
-  <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
-    AI-Powered Web3 Risk Intelligence Infrastructure
+  <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
+    Detect scams before you invest.
   </h1>
 
 
-  <p className="text-lg text-white/70 max-w-3xl mx-auto mb-10">
-    Building the intelligent security layer of Web3 with real-time AI monitoring,
-    predictive exploit detection and enterprise-grade risk analytics.
+  <p className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+    AI-powered risk analysis for Web3 — and the token that powers it.
   </p>
 
+<div className="flex flex-col md:flex-row gap-4 justify-center mt-6">
 
-  <div className="mt-6">
+        <a href="/presale"
+    className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg">
+        🚀 Join Presale
+      </a>
 
-
-  <div className="mb-4">
-    <Link
-      to="/whitepaper"
-      className="min-w-[220px] bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-green-500/30"
-  >
-    View Investor Whitepaper
-    </Link>
-  </div>
-
-  <div>
-    <a
-
+      <a
       href="https://neurosparkai-demo.vercel.app"
       target="_blank"
       rel="noopener noreferrer"
-      className="min-w-[220px] bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-8 py-4 rounded-xl transition shadow-lg shadow-cyan-400/30"
+      className="border border-gray-600 hover:border-gray-400 text-white px-8 py-4 rounded-xl transition duration-300"
     >
-      Try Live AI Demo
+      Try AI Demo
     </a>
-  </div>
 
 </div>
+
+  <p className="text-gray-400 text-sm mt-6">
+    Built to detect risky tokens — and designed not to be one.
+  </p>
+
+</section>
+
 
 
 {/* GLOBAL ATTACK MAP */}
@@ -180,20 +175,13 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 
 
 <div className="flex justify-center">
-
-
 <img 
-src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
-alt="Attack Map"
-className="opacity-80"
+
+src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg"
+alt="world map"
+className="opacity-60 max-w-4x1"
 />
-
 </div>
-
-
-<p className="text-center mt-6 text-white/70">
-Real-time AI monitoring of suspicious smart contract activity across global blockchain networks.
-</p>
 
 
 </section>
@@ -317,99 +305,46 @@ className="bg-green-500 px-6 py-3 rounded-xl font-semibold">
 </div>
 
        {/* TRUST METRICS */}
-        <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto text-white/80">
-          <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
-            <p className="text-3xl font-bold text-green-400">4</p>
-            <p>Verified Smart Contracts</p>
-          </div>
+<section className="mt-20 max-w-5xl mx-auto">
+  <div className="grid md:grid-cols-3 gap-8 text-white/80">
+    
+    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
+      <p className="text-3xl font-bold text-green-400">4</p>
+      <p>Verified Smart Contracts</p>
+    </div>
 
 
-          <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
-            <p className="text-3xl font-bold text-green-400">500M</p>
-            <p>Fixed Supply</p>
-          </div>
+    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
+      <p className="text-3xl font-bold text-green-400">500M</p>
+      <p>Fixed Supply</p>
+    </div>
 
 
-          <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
-            <p className="text-3xl font-bold text-green-400">BNB</p>
-            <p>Built on BNB Smart Chain</p>
-          </div>
-        </div>
-        
-      </section>
-
-       {/* AI SECURITY ENGINE */}
+    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
+      <p className="text-3xl font-bold text-green-400">BNB</p>
+      <p>Built on BNB Smart Chain</p>
+    </div>
 
 
-<section id="engine" className="py-24 px-6 bg-[#020617] text-white">
+  </div>
+</section>
+
+       
+{/* AI SECURITY ENGINE */}
 
 
-<div className="max-w-6xl mx-auto text-center">
+<section className="px-6 py-20">
 
 
-<h2 className="text-4xl font-bold mb-12">
-AI Security Engine
-</h2>
+  <h2 className="text-3xl font-bold text-center mb-10">
+    🧠 AI Security Engine
+  </h2>
 
 
-<p className="text-gray-400 max-w-3xl mx-auto mb-16">
-NeuroSpark AI analyzes blockchain activity and smart contracts to identify 
-potential security risks, exploit patterns, and abnormal on-chain behavior.
-</p>
-
-
-<div className="grid md:grid-cols-2 gap-10 text-left">
-
-
-<div className="bg-white/5 p-6 rounded-xl border border-white/10">
-<h3 className="text-xl font-semibold text-cyan-400 mb-2">
-Real-Time Smart Contract Monitoring
-</h3>
-<p className="text-gray-400">
-AI continuously scans blockchain transactions to detect suspicious activity 
-and potential vulnerabilities.
-</p>
-</div>
-
-
-<div className="bg-white/5 p-6 rounded-xl border border-white/10">
-<h3 className="text-xl font-semibold text-cyan-400 mb-2">
-Exploit Pattern Detection
-</h3>
-<p className="text-gray-400">
-Machine learning models analyze historical exploits to identify attack patterns 
-before they cause damage.
-</p>
-</div>
-
-
-<div className="bg-white/5 p-6 rounded-xl border border-white/10">
-<h3 className="text-xl font-semibold text-cyan-400 mb-2">
-DeFi Risk Scoring
-</h3>
-<p className="text-gray-400">
-Protocols can receive AI-generated risk scores based on smart contract structure 
-and on-chain activity.
-</p>
-</div>
-
-
-<div className="bg-white/5 p-6 rounded-xl border border-white/10">
-<h3 className="text-xl font-semibold text-cyan-400 mb-2">
-AI-Driven Security Intelligence
-</h3>
-<p className="text-gray-400">
-NeuroSpark AI delivers data-driven insights that help developers and users 
-understand blockchain risks.
-</p>
-</div>
-
-
-</div>
-
-
-</div>
-
+  <p className="text-gray-400 max-w-3xl mx-auto text-center">
+    NeuroSpark AI analyzes blockchain activity and smart contracts to identify
+    potential security risks, exploit patterns, and abnormal on-chain behavior.
+  </p>
 
 </section>
 
