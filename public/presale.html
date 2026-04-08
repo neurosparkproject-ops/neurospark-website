@@ -281,8 +281,68 @@ updateTotal();
 
 
 setInterval(updateTotal, Math.random() * 10000 + 10000);
+const names = ["Ali", "Mehmet", "Ahmet", "Emre", "John", "Alex", "David", "Sara"];
+const countries = ["Turkey", "Germany", "USA", "UK", "UAE", "France"];
+
+
+function randomWallet() {
+  const chars = "abcdef0123456789";
+  let address = "0x";
+  for (let i = 0; i < 4; i++) {
+    address += chars[Math.floor(Math.random() * chars.length)];
+  }
+  address += "...";
+  return address;
+}
+
+
+function showPopup() {
+  const popup = document.getElementById("joinPopup");
+
+
+  let text = "";
+
+
+  if (Math.random() < 0.5) {
+    const name = names[Math.floor(Math.random() * names.length)];
+    const country = countries[Math.floor(Math.random() * countries.length)];
+    text = "🚀 " + name + " from " + country + " joined whitelist";
+  } else {
+    text = "🚀 " + randomWallet() + " joined whitelist";
+  }
+
+
+  popup.innerText = text;
+
+
+  popup.style.display = "block";
+
+
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 3000);
+}
+
+
+// 20–40 saniyede bir çıkar
+setInterval(showPopup, Math.random() * 20000 + 20000);
 </script>
 
+<div id="joinPopup" style="
+position: fixed;
+bottom: 20px;
+left: 20px;
+background: #020617;
+border: 1px solid #1e293b;
+padding: 12px 16px;
+border-radius: 12px;
+color: #e2e8f0;
+font-size: 13px;
+display: none;
+box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+z-index: 999;
+">
+</div>
 
 </body>
 </html>
