@@ -588,12 +588,14 @@ NeuroSpark AI Development Roadmap
 Phase 1 — Foundation (Q1 2026)
 </h3>
 <ul className="list-disc ml-6 mt-2 text-gray-300">
-<li>NeuroSpark AI concept development</li>
-<li>Core smart contract architecture</li>
-<li>NSP Token creation</li>
-<li>TokenLock & Vesting smart contract deployment</li>
-<li>Official website launch</li>
-<li>Social channels launch (X, Telegram, YouTube)</li>
+  <li>NeuroSpark AI concept development</li>
+  <li>Core smart contract architecture</li>
+  <li>NSP Token creation</li>
+  <li>TokenLock & Vesting smart contract deployment</li>
+  <li>Presale smart contract deployed</li>
+  <li>Smart contracts verified on BscScan</li>
+  <li>Official website launch</li>
+  <li>Social channels launch (X, Telegram, YouTube)</li>
 </ul>
 </div>
 
