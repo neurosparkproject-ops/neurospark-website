@@ -269,17 +269,38 @@ AI Risk Intelligence Dashboard
   ● Live AI Demo
 </p>
 
+<div className="mt-10 max-w-3xl mx-auto bg-[#0f172a] border border-gray-700 rounded-xl p-6 text-left">
 
-<video
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="rounded-xl shadow-lg mx-auto mt-10"
-  style={{ maxWidth: "900px", width: "100%" }}
->
-  <source src="/demo.mp4" type="video/mp4" />
-</video>
+
+  <div className="flex justify-between items-center mb-4">
+    <span className="text-sm text-gray-400">Live Analysis</span>
+    <span className="text-green-400 text-sm font-semibold">ACTIVE</span>
+  </div>
+
+
+  <div className="bg-[#020617] border border-gray-800 rounded-lg p-4 mb-4">
+    <p className="text-xs text-gray-500 mb-1">Last scanned contract</p>
+    <p className="text-sm text-white">0x7a...92f3</p>
+  </div>
+
+
+  <div className="space-y-2 text-sm">
+    <div className="flex justify-between">
+      <span className="text-gray-400">Liquidity</span>
+      <span className="text-green-400">✔ Stable</span>
+    </div>
+    <div className="flex justify-between">
+      <span className="text-gray-400">Ownership</span>
+      <span className="text-green-400">Renounced</span>
+    </div>
+    <div className="flex justify-between">
+      <span className="text-gray-400">Risk Signals</span>
+      <span className="text-yellow-400">Moderate</span>
+    </div>
+  </div>
+
+
+</div>
 
 
 </div>
