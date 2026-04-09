@@ -316,9 +316,13 @@ AI Risk Intelligence Dashboard
     Only early users will unlock full AI analysis before public launch.
   </p>
 
-  <button className="bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-lg transition">
-    Join Whitelist
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScJnWa80e2GMgCPu0RmyH0xRWxCRf-YaBMWIuhlCprGeXsdww/viewform?usp=dialog"
+  target="_blank">
+  <button className="bg-green-500 hover:bg-green-400 text-black font-bold px-6 py-3 rounded-lg transition shadow-lg">
+  hover:scale-105">
+    Join Whitelist 🚀
   </button>
+</a>
 
 </div>
 
