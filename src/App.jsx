@@ -318,9 +318,8 @@ AI Risk Intelligence Dashboard
 
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScJnWa80e2GMgCPu0RmyH0xRWxCRf-YaBMWIuhlCprGeXsdww/viewform?usp=dialog"
   target="_blank">
-  <button className="bg-green-500 hover:bg-green-400 text-black font-bold px-6 py-3 rounded-lg transition shadow-lg">
-  hover:scale-105">
-    Join Whitelist 🚀
+  <button className="bg-green-500 hover:bg-green-400 hover:scale-105 text-black font-bold px-6 py-3 rounded-lg transition shadow-lg">
+      Join Whitelist 🚀
   </button>
 </a>
 
