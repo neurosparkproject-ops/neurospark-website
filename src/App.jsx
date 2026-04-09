@@ -305,6 +305,23 @@ AI Risk Intelligence Dashboard
 
 </div>
 
+<div className="mt-8 text-center">
+
+  <p className="text-yellow-400 text-sm mb-2">
+    ⚠ Limited Early Access
+  </p>
+
+
+  <p className="text-gray-400 text-sm mb-4">
+    Only early users will unlock full AI analysis before public launch.
+  </p>
+
+  <button className="bg-green-500 hover:bg-green-400 text-black font-semibold px-6 py-3 rounded-lg transition">
+    Join Whitelist
+  </button>
+
+</div>
+
  <div className="mt-20 max-w-4xl mx-auto text-center">
   <h3 className="text-2xl font-bold mb-6">
     Why traders use NeuroSpark
