@@ -129,12 +129,13 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 
 
   <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
-    Detect scams before you invest.
+    Detect scams before they drain your wallet.
   </h1>
 
 
   <p className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-    AI-powered risk analysis for Web3 — and the token that powers it.
+    AI-powered Web3 risk intelligence.<br/>
+    Analyze tokens, detect hidden risks, and avoid costly mistakes.
   </p>
 
 <div className="flex flex-col md:flex-row gap-4 justify-center mt-6">
@@ -150,14 +151,21 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
       rel="noopener noreferrer"
       className="border border-gray-600 hover:border-gray-400 text-white px-8 py-4 rounded-xl transition duration-300"
     >
-      Try AI Demo
+      Analyze Token Now
     </a>
-
 </div>
 
-  <p className="text-gray-400 text-sm mt-6">
-    Built to detect risky tokens — and designed not to be one.
-  </p>
+
+<div className="mt-6 text-sm text-gray-300 space-y-1">
+  <div>✔ Built on BNB Chain</div>
+  <div>✔ 4 Verified Smart Contracts</div>
+  <div>✔ Transparent Tokenomics & Vesting</div>
+</div>
+
+
+<p className="text-gray-400 text-base mt-6">
+  Built to detect risky tokens — and designed not to be one.
+</p>
 
 </section>
 
