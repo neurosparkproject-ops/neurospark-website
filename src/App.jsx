@@ -115,7 +115,7 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 <a href="#roadmap">Roadmap</a>
 <a href="#contracts">Contracts</a>
 <a href="#exploits">Exploit Tracker</a>
-<a href="/whitepaper">Whitepaper</a>
+<a href="/whitepaper.pdf"target="_blank">Whitepaper</a>
 
 
 </div>
