@@ -1,6 +1,6 @@
 // update
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Whitepaper from "./pages/Whitepaper";
 import dashboard from "./assets/dashboard.png";

@@ -6,6 +6,9 @@
 <title>NeuroSpark Presale</title>
 
 
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+
+
 <style>
 body {
   background: #0b1220;
@@ -16,20 +19,31 @@ body {
 }
 
 
+#connectWallet {
+  background: #22c55e;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+
+#connectWallet:hover {
+  opacity: 0.9;
+}
+
+
 .container {
   max-width: 600px;
   margin: auto;
 }
 
 
-h1 {
-  font-size: 32px;
-}
+h1 { font-size: 32px; }
 
 
-.highlight {
-  color: #facc15;
-}
+.highlight { color: #facc15; }
 
 
 .card {
@@ -102,26 +116,28 @@ h1 {
 </div>
 
 
-<p id="liveCounter" style="color:#facc15; margin-top:10px;">
-🔥 21 people viewing now
+<p style="color:#facc15; font-size:13px; margin-top:12px; margin-bottom:10px; opacity:0.9;">
+⚠️ Presale not live yet — do not send funds before launch.
 </p>
 
 
-<p id="joinCounter" style="color:#22c55e; font-size:14px;">
-⚡ 8 joined in last hour
-</p>
+<button id="connectWallet">Connect Wallet</button>
+<p id="walletAddress"></p>
 
-<p id="totalCounter" style="color:#38bdf8; margin-top:6px;">
-👛 128 wallets joined whitelist
-</p>
+
+<p id="liveCounter" style="color:#facc15;">🔥 21 people viewing now</p>
+<p id="joinCounter" style="color:#22c55e;">⚡ 8 joined in last hour</p>
+<p id="totalCounter" style="color:#38bdf8;">👛 128 wallets joined whitelist</p>
+
 
 <div class="card">
 <h3>💰 Presale Stages</h3>
-
-
 <p>Stage 1: $0.003</p>
 <p>Stage 2: $0.005</p>
 <p>Stage 3: $0.05</p>
+
+
+<button id="buyBtn" disabled>Presale opens soon</button>
 
 
 <div class="progress">
@@ -135,12 +151,7 @@ h1 {
 
 <div class="card">
 <h3>⚠️ Limited Allocation</h3>
-
-
-
-<p>
-Early participants may receive better pricing and benefits.
-</p>
+<p>Early participants may receive better pricing and benefits.</p>
 
 
 <button class="button"
@@ -148,208 +159,11 @@ onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJnWa80e2GMgCPu0
 🚀 Secure Early Access Spot
 </button>
 
-<p style="color:#facc15; font-size:13px; margin-top:8px;">
-⏳ Limited whitelist — closes soon
-</p>
 
-<p class="note">
-⚠️ Whitelist spots are filling fast. Public sale will open soon.
-</p>
+<p style="color:#facc15;">⏳ Limited whitelist — closes soon</p>
+<p class="note">⚠️ Whitelist spots are filling fast.</p>
 </div>
 
-<div class="card" style="text-align:left;">
-
-
-  <h3 style="color:#22c55e; margin-bottom:10px;">
-    🔒 Fair & Transparent Distribution
-  </h3>
-
-
-  <p style="color:#94a3b8; font-size:14px; margin-bottom:12px;">
-    NeuroSpark is built for long-term value — not short-term extraction.
-  </p>
-
-
-  <p style="color:#e2e8f0; font-size:14px; margin-bottom:10px;">
-    Unsold tokens are NOT controlled by the team and cannot be manually sold.
-  </p>
-
-
-  <p style="color:#94a3b8; font-size:14px; margin-bottom:10px;">
-    Instead, they are automatically handled by smart contracts:
-  </p>
-
-
-  <ul style="color:#94a3b8; font-size:14px; margin-bottom:12px; padding-left:18px;">
-    <li>• Bonus rewards for early holders (time-locked)</li>
-    <li>• Liquidity provisioning for DEX launch</li>
-    <li>• Ecosystem growth via vesting contract (gradual release)</li>
-  </ul>
-
-
-  <p style="color:#facc15; font-size:13px; margin-bottom:10px;">
-    ⚠️ No team access. No manual dumping. Fully automated.
-  </p>
-
-
-  <!-- 🔥 VERIFY BÖLÜMÜ -->
-  <p style="color:#22c55e; font-size:14px; margin-top:10px;">
-    🔍 Verified smart contracts on BscScan:
-  </p>
-
-
-  <p style="font-size:13px; line-height:1.8;">
-    <a href="https://bscscan.com/address/0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe" target="_blank" style="color:#38bdf8;">NSP Token Contract</a><br>
-    <a href="https://bscscan.com/address/0xAd14070Ace343194a758BCC3E29bE67424E1144A" target="_blank" style="color:#38bdf8;">Presale Contract</a><br>
-    <a href="https://bscscan.com/address/0x1683c88D0E65a0eC824Fdea01D858E8506912231" target="_blank" style="color:#38bdf8;">TokenLock Vesting</a><br>
-    <a href="https://bscscan.com/address/0x04e8146Cc10885ADB1F604A3CfaC77917FD83534" target="_blank" style="color:#38bdf8;">Unsold Manager</a>
-  </p>
-
-
-  <p style="color:#64748b; font-size:12px; margin-top:10px;">
-    All contract logic is publicly verifiable. No hidden functions.
-  </p>
-
-</div>
-
-
-  <p style="color:#64748b; font-size:12px;">
-    All flows are enforced by verified smart contracts — ensuring transparency and trust.
-  </p>
-
-
-</div>
-
-
-<script>
-// ⏳ 15 gün countdown
-const targetDate = new Date("2026-04-23T18:00:00Z");
-
-
-function updateCountdown() {
-  const now = new Date();
-  const diff = targetDate - now;
-
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-
-
-  document.getElementById("countdown").innerText =
-    days + "d " + hours + "h " + minutes + "m";
-}
-
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
-
-function updateFakeStats() {
-  const viewers = Math.floor(Math.random() * 15) + 18;
-  const joins = Math.floor(Math.random() * 10) + 5;
-
-
-  document.getElementById("liveCounter").innerText =
-    "🔥 " + viewers + " people viewing now";
-
-
-  document.getElementById("joinCounter").innerText =
-    "⚡ " + joins + " joined in last hour";
-}
-
-
-setInterval(updateFakeStats, 5000);
-updateFakeStats();
-
-let total = localStorage.getItem("whitelistTotal");
-let lastVisit = localStorage.getItem("lastVisit");
-
-
-if (!total) {
-  total = 128;
-} else {
-  total = parseInt(total);
-}
-
-
-let now = Date.now();
-
-
-if (lastVisit) {
-  let diff = now - parseInt(lastVisit);
-  let extra = Math.floor(diff / (1000 * 60 * 30));
-  total += extra;
-}
-
-
-localStorage.setItem("whitelistTotal", total);
-localStorage.setItem("lastVisit", now);
-
-
-function updateTotal() {
-  if (Math.random() < 0.5) {
-    total += 1;
-  }
-
-
-  document.getElementById("totalCounter").innerText =
-    "👛 " + total + " wallets joined whitelist";
-
-
-  localStorage.setItem("whitelistTotal", total);
-}
-
-
-updateTotal();
-
-
-setInterval(updateTotal, Math.random() * 10000 + 10000);
-const names = ["Ali", "Mehmet", "Ahmet", "Emre", "John", "Alex", "David", "Sara"];
-const countries = ["Turkey", "Germany", "USA", "UK", "UAE", "France"];
-
-
-function randomWallet() {
-  const chars = "abcdef0123456789";
-  let address = "0x";
-  for (let i = 0; i < 4; i++) {
-    address += chars[Math.floor(Math.random() * chars.length)];
-  }
-  address += "...";
-  return address;
-}
-
-
-function showPopup() {
-  const popup = document.getElementById("joinPopup");
-
-
-  let text = "";
-
-
-  if (Math.random() < 0.5) {
-    const name = names[Math.floor(Math.random() * names.length)];
-    const country = countries[Math.floor(Math.random() * countries.length)];
-    text = "🚀 " + name + " from " + country + " joined whitelist";
-  } else {
-    text = "🚀 " + randomWallet() + " joined whitelist";
-  }
-
-
-  popup.innerText = text;
-
-
-  popup.style.display = "block";
-
-
-  setTimeout(() => {
-    popup.style.display = "none";
-  }, 3000);
-}
-
-
-// 20–40 saniyede bir çıkar
-setInterval(showPopup, Math.random() * 20000 + 20000);
-</script>
 
 <div id="joinPopup" style="
 position: fixed;
@@ -357,15 +171,110 @@ bottom: 20px;
 left: 20px;
 background: #020617;
 border: 1px solid #1e293b;
-padding: 12px 16px;
+padding: 12px;
 border-radius: 12px;
-color: #e2e8f0;
-font-size: 13px;
-display: none;
-box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-z-index: 999;
-">
+display: none;">
 </div>
+
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+
+  const buyBtn = document.getElementById("buyBtn");
+  const countdownEl = document.getElementById("countdown");
+  const connectBtn = document.getElementById("connectWallet");
+  const walletText = document.getElementById("walletAddress");
+
+
+  // ⏱️ LAUNCH TIME
+  const launchTime = new Date("2026-04-24T15:00:00Z").getTime();
+
+
+  setInterval(() => {
+    const now = Date.now();
+    const distance = launchTime - now;
+
+
+    if (distance <= 0) {
+      buyBtn.disabled = false;
+      buyBtn.innerText = "Buy NSP";
+      countdownEl.innerText = "Presale is live!";
+      return;
+    }
+
+
+    buyBtn.disabled = true;
+    buyBtn.innerText = "Coming Soon";
+
+
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+
+    countdownEl.innerText = `Live in ${hours}h ${minutes}m`;
+  }, 1000);
+
+
+  // WALLET CONNECT
+  connectBtn.onclick = async () => {
+    if (!window.ethereum) {
+      alert("MetaMask not installed!");
+      return;
+    }
+
+
+    const accounts = await window.ethereum.request({
+      method: "eth_requestAccounts",
+    });
+
+
+    const address = accounts[0];
+    walletText.innerText =
+      address.slice(0,6) + "..." + address.slice(-4);
+  };
+
+
+  // FAKE STATS
+  setInterval(() => {
+    document.getElementById("liveCounter").innerText =
+      "🔥 " + (Math.floor(Math.random()*15)+18) + " people viewing now";
+
+
+    document.getElementById("joinCounter").innerText =
+      "⚡ " + (Math.floor(Math.random()*10)+5) + " joined in last hour";
+  }, 5000);
+
+
+  // POPUP
+  const popup = document.getElementById("joinPopup");
+
+
+  function randomWallet() {
+    return "0x" + Math.random().toString(16).substr(2,4) + "...";
+  }
+
+
+  function showPopup() {
+    popup.innerText = "🚀 " + randomWallet() + " joined whitelist";
+    popup.style.display = "block";
+
+
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 3000);
+  }
+
+
+  setInterval(showPopup, Math.random()*20000+20000);
+
+
+});
+</script>
+
 
 </body>
 </html>
