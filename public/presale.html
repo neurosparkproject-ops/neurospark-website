@@ -128,10 +128,6 @@ h1 { font-size: 32px; }
 <p id="walletAddress"></p>
 
 
-<p id="liveCounter" style="color:#facc15;">🔥 21 people viewing now</p>
-<p id="joinCounter" style="color:#22c55e;">⚡ 8 joined in last hour</p>
-<p id="totalCounter" style="color:#38bdf8;">👛 128 wallets joined whitelist</p>
-
 
 <div class="card">
 <h3>💰 Presale Stages</h3>
@@ -198,20 +194,6 @@ onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJnWa80e2GMgCPu0
 <p class="note">⚠️ Whitelist spots are filling fast.</p>
 </div>
 
-
-<div id="joinPopup" style="
-position: fixed;
-bottom: 20px;
-left: 20px;
-background: #020617;
-border: 1px solid #1e293b;
-padding: 12px;
-border-radius: 12px;
-display: none;">
-</div>
-
-
-</div>
 
 
 <div class="card">
@@ -312,40 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
     walletText.innerText =
       address.slice(0,6) + "..." + address.slice(-4);
   };
-
-
-  // FAKE STATS
-  setInterval(() => {
-    document.getElementById("liveCounter").innerText =
-      "🔥 " + (Math.floor(Math.random()*15)+18) + " people viewing now";
-
-
-    document.getElementById("joinCounter").innerText =
-      "⚡ " + (Math.floor(Math.random()*10)+5) + " joined in last hour";
-  }, 5000);
-
-
-  // POPUP
-  const popup = document.getElementById("joinPopup");
-
-
-  function randomWallet() {
-    return "0x" + Math.random().toString(16).substr(2,4) + "...";
-  }
-
-
-  function showPopup() {
-    popup.innerText = "🚀 " + randomWallet() + " joined whitelist";
-    popup.style.display = "block";
-
-
-    setTimeout(() => {
-      popup.style.display = "none";
-    }, 3000);
-  }
-
-
-  setInterval(showPopup, Math.random()*20000+20000);
 
 
 });
