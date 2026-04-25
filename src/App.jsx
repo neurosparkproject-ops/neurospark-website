@@ -158,7 +158,7 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 
 <div className="mt-6 text-sm text-gray-300 space-y-1">
   <div>✔ Built on BNB Chain</div>
-  <div>✔ 4 Verified Smart Contracts</div>
+  <div>✔ 3 Verified Smart Contracts</div>
   <div>✔ Transparent Tokenomics & Vesting</div>
 </div>
 
