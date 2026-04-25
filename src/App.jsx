@@ -462,96 +462,47 @@ Reentrancy pattern detected during collateral withdrawal.
 
 
   <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    
+
+
     {/* Grafik */}
-
     <div className="mt-12 flex justify-center">
+      <div style={{ width: 400, height: 300 }}>
+        <ResponsiveContainer>
+          <PieChart>
+            <Pie
+              data={[
+                { name: "Presale", value: 20 },
+                { name: "Ecosystem & Development", value: 80 }
+              ]}
+              cx="50%"
+              cy="50%"
+              outerRadius={100}
+              dataKey="value"
+              label
+            >
+              <Cell fill="#22c55e" />
+              <Cell fill="#06b6d4" />
+            </Pie>
+            <Tooltip />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
 
 
-<div style={{ width: 400, height: 300 }}>
+    {/* Sağ içerik */}
+    <div className="mt-10 space-y-6 text-left max-w-xl mx-auto">
 
 
-<ResponsiveContainer>
+      <h3 className="text-xl font-semibold text-cyan-400">Tokenomics Overview</h3>
 
 
-<PieChart>
+      <p>
+        <strong>Total Supply:</strong> 500,000,000 NSP<br />
+        <strong>Minting:</strong> Disabled (Fixed Supply)
+      </p>
 
 
-<Pie
-data={tokenomicsData}
-cx="50%"
-cy="50%"
-outerRadius={100}
-dataKey="value"
-label
->
-
-
-{tokenomicsData.map((entry, index) => (
-
-
-<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-
-
-))}
-
-
-</Pie>
-
-
-<Tooltip />
-
-
-</PieChart>
-
-
-</ResponsiveContainer>
-
-
-</div>
-
-
-</div>
-
-<div className="mt-10 space-y-6 text-left max-w-xl mx-auto">
-
-
-<h3 className="text-xl font-semibold text-cyan-400">Tokenomics Overview</h3>
-
-
-<p>
-<strong>20% Presale Allocation</strong><br/>
-Distributed during the public presale phase.
-</p>
-
-
-<p>
-<strong>80% Ecosystem & Development Reserve</strong><br/>
-Locked via TokenLockVesting smart contract to ensure long-term sustainability.
-</p>
-
-
-<h3 className="text-xl font-semibold text-cyan-400 mt-6">Vesting Mechanism</h3>
-
-
-<ul className="list-disc ml-6 space-y-2">
-<li>Initial <strong>6-month cliff</strong></li>
-<li><strong>5% monthly release schedule</strong></li>
-<li>Tokens support ecosystem growth, partnerships and protocol development</li>
-</ul>
-
-
-<p className="text-sm text-gray-400 mt-6">
-All token locks and vesting contracts are publicly verifiable on BscScan.
-</p>
-
-
-</div>
-
-
-    {/* Dağılım */}
-    <div className="space-y-6 text-left">
-      
       <div className="bg-white/5 p-6 rounded-xl border border-white/10">
         <p className="text-green-400 text-xl font-bold">20% Presale</p>
         <p className="text-white/60 mt-2">Public token distribution phase</p>
@@ -559,14 +510,58 @@ All token locks and vesting contracts are publicly verifiable on BscScan.
 
 
       <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-        <p className="text-cyan-400 text-xl font-bold">80% TokenLock & Vesting</p>
-        <p className="text-white/60 mt-2">Long-term ecosystem sustainability</p>
+        <p className="text-cyan-400 text-xl font-bold">80% Ecosystem & Development</p>
+        <p className="text-white/60 mt-2">Long-term growth, partnerships and platform expansion</p>
       </div>
 
 
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Vesting Mechanism</h3>
+
+
+      <ul className="list-disc ml-6 space-y-2">
+        <li>6-month cliff (initial lock)</li>
+        <li>5% monthly release after cliff</li>
+        <li>No hidden minting or inflation</li>
+        <li>Fully transparent and verifiable on-chain</li>
+      </ul>
+
+
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Liquidity Strategy</h3>
+
+
+      <ul className="list-disc ml-6 space-y-2">
+        <li>Liquidity deployed at launch</li>
+        <li><strong>5,000,000 NSP + up to 250 BNB</strong> initial pool</li>
+        <li>Liquidity locked for <strong>12 months</strong></li>
+        <li>Designed for stability and long-term confidence</li>
+      </ul>
+
+
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Token Utility</h3>
+
+
+      <ul className="list-disc ml-6 space-y-2">
+        <li>AI-powered risk analysis access</li>
+        <li>Smart contract scanning tools</li>
+        <li>Premium analytics features</li>
+        <li>Future governance participation</li>
+      </ul>
+
+
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Growth Vision</h3>
+
+
+      <p>
+        NeuroSpark targets the <strong>$0.05 price zone</strong> as a key growth milestone, driven by platform adoption and ecosystem expansion.
+      </p>
+
+
+      <p className="text-sm text-gray-400 mt-6">
+        All token allocations, vesting schedules, and liquidity locks are publicly verifiable on-chain.
+      </p>
+
+
     </div>
-
-
   </div>
 </section>
 
