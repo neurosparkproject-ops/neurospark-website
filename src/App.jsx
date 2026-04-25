@@ -706,20 +706,18 @@ Phase 5 — Ecosystem Expansion (2027)
     {[
       {
         title: "NSP Token Contract",
-        address: "0xf3166D06768CcA4db98b7239B34FfAE35c16a5Fe"
+        address: "0x625df14C51555B3264dAbe62dDE85D2b6cb19fbD"
       },
       {
         title: "Presale Contract",
-        address: "0xAd14070Ace343194a758BCC3E29bE67424E1144A"
+        address: "0xE63C01BF33A80Cfee58700a88E634c905649F957"
       },
       {
-        title: "TokenLock Vesting",
-        address: "0x1683c88D0E65a0eC824Fdea01D858E8506912231"
-      },
-      {
-        title: "Unsold Manager",
-        address: "0x04e8146Cc10885ADB1F604A3CfaC77917FD83534"
+        title: "Vesting Contract (Locked & On-Chain)",
+        address: "0xaE1a7Df5c3029f328fEECc8b0056B10e7191A924"
       }
+      
+        
     ].map((contract, index) => {
 
 
