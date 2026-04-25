@@ -461,18 +461,22 @@ Reentrancy pattern detected during collateral withdrawal.
   <h2 className="text-3xl font-bold mb-12">Tokenomics</h2>
 
 
-  <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
 
-    {/* Grafik */}
+    {/* PIE CHART */}
     <div className="mt-12 flex justify-center">
       <div style={{ width: 400, height: 300 }}>
         <ResponsiveContainer>
           <PieChart>
             <Pie
               data={[
-                { name: "Presale", value: 20 },
-                { name: "Ecosystem & Development", value: 80 }
+                { name: "Presale", value: 19 },
+                { name: "Ecosystem", value: 30 },
+                { name: "Marketing", value: 20 },
+                { name: "Team", value: 15 },
+                { name: "Reserve", value: 15 },
+                { name: "Liquidity", value: 1 }
               ]}
               cx="50%"
               cy="50%"
@@ -482,6 +486,10 @@ Reentrancy pattern detected during collateral withdrawal.
             >
               <Cell fill="#22c55e" />
               <Cell fill="#06b6d4" />
+              <Cell fill="#f59e0b" />
+              <Cell fill="#8b5cf6" />
+              <Cell fill="#3b82f6" />
+              <Cell fill="#14b8a6" />
             </Pie>
             <Tooltip />
           </PieChart>
@@ -490,80 +498,103 @@ Reentrancy pattern detected during collateral withdrawal.
     </div>
 
 
-    {/* Sağ içerik */}
+    {/* CONTENT */}
     <div className="mt-10 space-y-6 text-left max-w-xl mx-auto">
 
 
-      <h3 className="text-xl font-semibold text-cyan-400">Tokenomics Overview</h3>
+      {/* OVERVIEW */}
+      <h3 className="text-xl font-semibold text-cyan-400">Overview</h3>
 
 
       <p>
-        <strong>Total Supply:</strong> 500,000,000 NSP<br />
-        <strong>Minting:</strong> Disabled (Fixed Supply)
+        <strong>Total Supply:</strong> 500,000,000 NSP (fixed)<br />
+        <strong>Minting:</strong> Disabled — no additional tokens can ever be created<br />
+        <strong>Liquidity:</strong> 5,000,000 NSP paired with <strong>150–250 BNB</strong> at launch, locked for <strong>12 months</strong>
       </p>
 
 
-      <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-        <p className="text-green-400 text-xl font-bold">20% Presale</p>
-        <p className="text-white/60 mt-2">Public token distribution phase</p>
-      </div>
+      {/* ALLOCATION */}
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Allocation</h3>
 
 
-      <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-        <p className="text-cyan-400 text-xl font-bold">80% Ecosystem & Development</p>
-        <p className="text-white/60 mt-2">Long-term growth, partnerships and platform expansion</p>
-      </div>
-
-
-      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Vesting Mechanism</h3>
-
-
-      <ul className="list-disc ml-6 space-y-2">
-        <li>6-month cliff (initial lock)</li>
-        <li>5% monthly release after cliff</li>
-        <li>No hidden minting or inflation</li>
-        <li>Fully transparent and verifiable on-chain</li>
+      <ul className="space-y-2">
+        <li><strong>19% — Presale</strong> (95,000,000 NSP)</li>
+        <li><strong>30% — Ecosystem</strong> (150,000,000 NSP)</li>
+        <li><strong>20% — Marketing</strong> (100,000,000 NSP)</li>
+        <li><strong>15% — Team</strong> (75,000,000 NSP)</li>
+        <li><strong>15% — Reserve</strong> (75,000,000 NSP)</li>
+        <li><strong>1% — Liquidity</strong> (5,000,000 NSP)</li>
       </ul>
 
 
-      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Liquidity Strategy</h3>
+      {/* ALLOCATION DETAILS */}
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Allocation Details</h3>
 
 
       <ul className="list-disc ml-6 space-y-2">
-        <li>Liquidity deployed at launch</li>
-        <li><strong>5,000,000 NSP + up to 250 BNB</strong> initial pool</li>
-        <li>Liquidity locked for <strong>12 months</strong></li>
-        <li>Designed for stability and long-term confidence</li>
+        <li><strong>Ecosystem:</strong> AI platform development, infrastructure, and product expansion</li>
+        <li><strong>Marketing:</strong> Growth campaigns, partnerships, and user acquisition</li>
+        <li><strong>Reserve:</strong> Strategic reserve for sustainability and market stability</li>
       </ul>
 
 
-      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Token Utility</h3>
+      {/* PRESALE */}
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Presale Mechanics</h3>
 
 
       <ul className="list-disc ml-6 space-y-2">
-        <li>AI-powered risk analysis access</li>
-        <li>Smart contract scanning tools</li>
-        <li>Premium analytics features</li>
+        <li>Duration: <strong>14 days</strong> or until hardcap is reached</li>
+        <li>Unsold tokens will be <strong>permanently burned</strong></li>
+        <li><strong>10,000,000 NSP bonus pool</strong></li>
+        <li>Buyers receive up to <strong>20% bonus tokens</strong> per purchase</li>
+        <li>Bonus is distributed until the pool is depleted</li>
+      </ul>
+
+
+      {/* VESTING */}
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Vesting</h3>
+
+
+      <ul className="list-disc ml-6 space-y-2">
+        <li>Team: 12-month cliff + 18-month linear vesting</li>
+        <li>Marketing: 3-month cliff + 12-month vesting</li>
+        <li>Ecosystem: 2-month cliff + 18-month vesting</li>
+        <li>Reserve: 6-month cliff + 18-month vesting</li>
+        <li>All allocations are locked via smart contract</li>
+      </ul>
+
+
+      {/* UTILITY */}
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Utility</h3>
+
+
+      <ul className="list-disc ml-6 space-y-2">
+        <li>AI-powered risk intelligence tools</li>
+        <li>Smart contract security analysis</li>
+        <li>Premium analytics & insights</li>
         <li>Future governance participation</li>
       </ul>
 
 
+      {/* GROWTH */}
       <h3 className="text-xl font-semibold text-cyan-400 mt-6">Growth Vision</h3>
 
 
       <p>
-        NeuroSpark targets the <strong>$0.05 price zone</strong> as a key growth milestone, driven by platform adoption and ecosystem expansion.
+        Initial listing price is determined by liquidity conditions at launch.  
+        NeuroSpark targets the <strong>$0.05 price zone</strong> as a key growth milestone driven by AI utility and ecosystem expansion.
       </p>
 
 
       <p className="text-sm text-gray-400 mt-6">
-        All token allocations, vesting schedules, and liquidity locks are publicly verifiable on-chain.
+        All allocations, vesting contracts, liquidity locks, and burn events are publicly verifiable on-chain.
       </p>
 
 
     </div>
   </div>
 </section>
+
 
       {/* ROADMAP */}
 <section id="roadmap" className="py-20 bg-black text-white">
