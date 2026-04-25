@@ -358,7 +358,7 @@ className="bg-green-500 px-6 py-3 rounded-xl font-semibold">
   <div className="grid md:grid-cols-3 gap-8 text-white/80">
     
     <div className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur">
-      <p className="text-3xl font-bold text-green-400">4</p>
+      <p className="text-3xl font-bold text-green-400">3</p>
       <p>Verified Smart Contracts</p>
     </div>
 
