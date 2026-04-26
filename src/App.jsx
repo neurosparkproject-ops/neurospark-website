@@ -138,23 +138,35 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
     Analyze tokens, detect hidden risks, and avoid costly mistakes.
   </p>
 
-<div className="flex flex-col md:flex-row gap-4 justify-center mt-6">
+<div className="flex flex-col items-center mt-6">
 
-        <a href="/presale.html"
-    className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg">
-        🚀 Join Presale
-      </a>
 
-      <a
-      href="https://neurosparkai-demo.vercel.app"
+  <div className="flex flex-col md:flex-row gap-4 justify-center">
+    
+    <a
+      href="/presale.html"
+      className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-3 rounded-xl"
+    >
+      🚀 Join Presale
+    </a>
+
+    <a
+     
+ href="https://neurosparkai-demo.vercel.app"
       target="_blank"
       rel="noopener noreferrer"
-      className="border border-gray-600 hover:border-gray-400 text-white px-8 py-4 rounded-xl transition duration-300"
+      className="border border-gray-600 hover:border-gray-400 text-white px-8 py-3 rounded-xl"
     >
-      Analyze Token Now
+      Try AI Risk Scanner (Live Demo)
     </a>
-</div>
 
+  </div>
+
+  <p className="text-sm text-gray-400 mt-4 text-center">
+    Analyze any token instantly with our AI engine
+  </p>
+
+</div>
 
 <div className="mt-6 text-sm text-gray-300 space-y-1">
   <div>✔ Built on BNB Chain</div>
