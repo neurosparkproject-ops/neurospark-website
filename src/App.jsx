@@ -622,6 +622,7 @@ Phase 1 — Foundation (Q1 2026)
   <li>TokenLock & Vesting smart contract deployment</li>
   <li>Presale smart contract deployed</li>
   <li>Smart contracts verified on BscScan</li>
+  <li>Live AI-powered token analysis demo available (early access)</li>
   <li>Official website launch</li>
   <li>Social channels launch (X, Telegram, YouTube)</li>
 </ul>
@@ -633,7 +634,7 @@ Phase 1 — Foundation (Q1 2026)
 Phase 2 — Ecosystem Launch (Q2 2026)
 </h3>
 <ul className="list-disc ml-6 mt-2 text-gray-300">
-<li>NSP token presale</li>
+<li>NSP token presale (launch after final security validation)</li>
 <li>Smart contract security review</li>
 <li>Community growth campaign</li>
 <li>Initial exploit analysis content series</li>
