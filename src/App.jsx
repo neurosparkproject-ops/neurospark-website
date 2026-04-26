@@ -544,7 +544,9 @@ Reentrancy pattern detected during collateral withdrawal.
 
       <ul className="list-disc ml-6 space-y-2">
         <li>Duration: <strong>14 days</strong> or until hardcap is reached</li>
-        <li>Unsold tokens will be <strong>permanently burned</strong></li>
+        <li>
+  Unsold tokens will be permanently burned via smart contract and sent to the dead address (0x000000000000000000000000000000000000dEaD), fully verifiable on-chain.
+</li>
         <li><strong>10,000,000 NSP bonus pool</strong></li>
         <li>Buyers receive up to <strong>20% bonus tokens</strong> per purchase</li>
         <li>Bonus is distributed until the pool is depleted</li>
