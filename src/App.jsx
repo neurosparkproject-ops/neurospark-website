@@ -725,7 +725,7 @@ Phase 5 — Ecosystem Expansion (2027)
       },
       {
         title: "Presale Contract",
-        address: "0xE63C01BF33A80Cfee58700a88E634c905649F957"
+        address: "0x5C13DB982f74CAFf154F66EC791a3b6a17dF5C7f"
       },
       {
         title: "Vesting Contract (Locked & On-Chain)",

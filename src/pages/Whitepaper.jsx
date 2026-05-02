@@ -1,107 +1,202 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { ethers } from "ethers";
 
 
-export default function Whitepaper() {
+const PRESALE_ADDRESS = "0x5a3EdEdCDd99F81b346a8dd0D39F10d0Aa98aAd4";
+
+
+const ABI = [
+  "function buy() payable",
+  "function getPrice() view returns (uint256)"
+];
+
+
+export default function Presale() {
+  const [amount, setAmount] = useState("");
+  const [status, setStatus] = useState("");
+  const [price, setPrice] = useState(null);
+
+
+  // 🔥 fiyat çek (stage'e göre)
+  useEffect(() => {
+    const loadPrice = async () => {
+      try {
+        if (!window.ethereum) return;
+
+
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const contract = new ethers.Contract(PRESALE_ADDRESS, ABI, provider);
+
+
+        const p = await contract.getPrice();
+        setPrice(p);
+      } catch (err) {
+        console.log("Price error:", err);
+      }
+    };
+
+
+    loadPrice();
+  }, []);
+
+
+  // 🔥 token hesap (bonus dahil)
+  const tokens = (() => {
+    try {
+      if (!amount || Number(amount) <= 0 || !price) return 0;
+
+
+      const priceBNB = Number(ethers.utils.formatEther(price));
+      const calculated = (Number(amount) / priceBNB) * 1.2;
+
+
+      return Math.floor(calculated);
+    } catch {
+      return 0;
+    }
+  })();
+
+
+  // 🚀 satın alma
+  const buyTokens = async () => {
+    try {
+      if (!window.ethereum) {
+        alert("Metamask yok");
+        return;
+      }
+
+
+      if (!amount || Number(amount) <= 0) {
+        alert("Geçerli miktar gir");
+        return;
+      }
+
+
+      if (Number(amount) < 0.05) {
+        alert("Minimum 0.05 BNB");
+        return;
+      }
+
+
+      if (Number(amount) > 5) {
+        alert("Maximum 5 BNB");
+        return;
+      }
+
+
+      setStatus("⏳ Processing...");
+
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+
+
+      const signer = provider.getSigner();
+
+
+      const tx = await signer.sendTransaction({
+        to: PRESALE_ADDRESS,
+        value: ethers.utils.parseEther(amount)
+      });
+
+
+      await tx.wait();
+
+
+      setStatus("✅ Success!");
+      setAmount("");
+    } catch (err) {
+      console.log(err);
+      setStatus("❌ Error");
+    }
+  };
+
+
   return (
-    <div className="min-h-screen bg-[#0b1120] text-white px-6 py-20">
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
+        color: "#fff",
+        fontFamily: "Arial",
+      }}
+    >
+      <div
+        style={{
+          background: "#0b1e2a",
+          padding: "40px",
+          borderRadius: "20px",
+          width: "320px",
+          textAlign: "center",
+        }}
+      >
+        <h2>NeuroSpark Presale</h2>
 
 
-      <div className="max-w-5xl mx-auto">
+        <input
+          placeholder="0.05 BNB"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "12px",
+            borderRadius: "10px",
+            border: "none",
+            marginBottom: "15px",
+            fontSize: "16px",
+            color: "#000",
+            background: "#fff",
+            outline: "none",
+          }}
+        />
 
 
-        <Link to="/" className="text-green-400 text-sm mb-8 inline-block">
-          ← Back to Home
-        </Link>
+        <p>
+          Price:{" "}
+          {price
+            ? Number(ethers.utils.formatEther(price)).toFixed(8)
+            : "..."}{" "}
+          BNB
+        </p>
 
 
-        {/* HEADER */}
-        <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold mb-6">
-            NeuroSpark (NSP)
-          </h1>
-          <p className="text-lg text-white/70 max-w-3xl mx-auto mb-8">
-            AI-powered real-time risk intelligence infrastructure designed
-            to protect Web3 ecosystems through predictive exploit modeling
-            and behavioral blockchain analytics.
-          </p>
+        <p style={{ marginBottom: "20px" }}>
+          You will receive:
+          <br />
+          <b style={{ fontSize: "18px", color: "#00ffd5" }}>
+            {tokens} NSP
+          </b>
+        </p>
 
 
-          <button
-  onClick={() => {
-    const link = document.createElement("a");
-    link.href = "/whitepaper.pdf";
-    link.download = "whitepaper.pdf";
-    link.click();
-  }}
-  className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 rounded-xl transition"
->
-  Download Full PDF
-</button>
-        </div>
+        <p style={{ fontSize: "13px", opacity: 0.7 }}>
+          +20% bonus included
+        </p>
 
 
-        {/* EXECUTIVE SUMMARY */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-4 text-green-400">
-            Executive Summary
-          </h2>
-          <p className="text-white/70 leading-relaxed">
-            Billions of dollars are lost annually due to smart contract
-            exploits, oracle manipulation and flash loan attacks.
-            NeuroSpark introduces an AI-native infrastructure that detects,
-            analyzes and predicts vulnerabilities before they escalate.
-          </p>
-        </section>
+        <button
+          onClick={buyTokens}
+          style={{
+            width: "100%",
+            padding: "12px",
+            borderRadius: "10px",
+            border: "none",
+            background: "#00ffd5",
+            color: "#000",
+            fontWeight: "bold",
+            cursor: "pointer",
+          }}
+        >
+          Buy Tokens
+        </button>
 
 
-        {/* MARKET OPPORTUNITY */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-green-400">
-            Market Opportunity
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              "Rapid Web3 Expansion",
-              "Increasing Exploit Frequency",
-              "Demand for AI Security Infrastructure"
-            ].map((item, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 p-6 rounded-xl">
-                {item}
-              </div>
-            ))}
-          </div>
-        </section>
-
-
-        {/* TOKEN UTILITY */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-4 text-green-400">
-            NSP Token Utility
-          </h2>
-          <ul className="list-disc list-inside text-white/70 space-y-2">
-            <li>Access to premium AI monitoring tools</li>
-            <li>Staking for security node rewards</li>
-            <li>Governance participation</li>
-            <li>Enterprise API payments</li>
-          </ul>
-        </section>
-
-
-        {/* SECURITY FRAMEWORK */}
-        <section>
-          <h2 className="text-2xl font-bold mb-4 text-green-400">
-            Security Framework
-          </h2>
-          <ul className="text-white/70 space-y-2">
-            <li>4 Verified Smart Contracts</li>
-            <li>Immutable 500M Fixed Supply</li>
-            <li>No Mint Function</li>
-            <li>Transparent Vesting Architecture</li>
-          </ul>
-        </section>
-
-
+        <p style={{ marginTop: "15px", fontSize: "14px" }}>
+          {status}
+        </p>
       </div>
     </div>
   );
