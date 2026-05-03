@@ -555,7 +555,7 @@ Reentrancy pattern detected during collateral withdrawal.
 
 
       <ul className="list-disc ml-6 space-y-2">
-        <li>Duration: <strong>14 days</strong> or until hardcap is reached</li>
+        <li>Duration: <strong>21 days</strong> or until hardcap is reached</li>
         <li>
   Unsold tokens will be permanently burned via smart contract and sent to the dead address (0x000000000000000000000000000000000000dEaD), fully verifiable on-chain.
 </li>
