@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Whitepaper from "./pages/Whitepaper";
-import Presale from "./pages/Presale";
+import Presale from "./pages/presale";
 import Home from "./pages/Home";
 
 function App() {
