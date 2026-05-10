@@ -4,6 +4,14 @@
   "outputDirectory": "dist",
 
 
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+
+
   "headers": [
     {
       "source": "/(.*)",
