@@ -61,16 +61,16 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 </div>
 
 
-<div className="hidden md:flex gap-8 text-[15px] text-white/80 font-medium">
+<div className="flex gap-3 text-[8px] md:text-[15px] text-white/80 font-medium">
 
 
 <a href="#">Home</a>
-<a href="#engine">AI Engine</a>
-<a href="#attackmap">Attack Map</a>
+<a href="#engine" className="hidden md:block">AI Engine</a>
+<a href="#attackmap" className="hidden md:block">Attack Map</a>
 <a href="#tokenomics">Tokenomics</a>
 <a href="#roadmap">Roadmap</a>
-<a href="#contracts">Contracts</a>
-<a href="#exploits">Exploit Tracker</a>
+<a href="#contracts" className="hidden md:block">Contracts</a>
+<a href="#exploits" className="hidden md:block">Exploit Tracker</a>
 <a href="/whitepaper.pdf"target="_blank">Whitepaper</a>
 
 
