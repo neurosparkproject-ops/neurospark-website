@@ -248,72 +248,6 @@ export default function Presale() {
     {/* 🔥 ANA FLEX LAYOUT */}
     <div style={mainLayout}>
 
-
-      {/* SOL TARAF */}
-      <div style={leftSide}>
-
-
-        <div style={infoCard}>
-          <h3 style={title}>About NeuroSpark</h3>
-          <p style={text}>
-            AI-powered Web3 risk intelligence platform that analyzes tokens,
-            detects hidden smart contract risks and helps users avoid exploits.
-          </p>
-        </div>
-
-
-        <div style={infoCard}>
-          <h3 style={title}>Why NeuroSpark</h3>
-          <ul style={list}>
-            <li>⚠️ Detect risky tokens before you buy</li>
-            <li>🔍 Analyze smart contracts instantly</li>
-            <li>🧠 AI-powered exploit detection</li>
-          </ul>
-        </div>
-
-
-        <div style={infoCard}>
-          <h3 style={title}>Tokenomics</h3>
-          <div style={text}>
-            <div>Presale: 19%</div>
-            <div>Ecosystem: 30%</div>
-            <div>Marketing: 20%</div>
-            <div>Team: 15%</div>
-            <div>Reserve: 15%</div>
-            <div>Liquidity: 1%</div>
-              <p style={{ marginTop:10, fontSize:11, color:"#cfefff", lineHeight:1.7 }}>
-                 Total Supply: 500M NSP <br/>
-                 • No minting <br/>
-                 • Liquidity locked
-              </p>
-          </div>
-        </div>
-
-
-        <div style={infoCard}>
-          <h3 style={title}>Roadmap</h3>
-          <ul style={list}>
-            <li>Q1 — Token & Presale launch</li>
-            <li>Q2 — Ecosystem growth</li>
-            <li>Q3 — AI engine</li>
-            <li>Q4 — Platform beta release</li>
-          </ul>
-           <p style={{ 
-             marginTop:10,
-             fontSize:13,
-             color:"#00ffaa",
-             fontWeight:"600",
-             cursor:"pointer",
-             paddingLeft:2
-           }}>
-             View full website →
-         </p>
-        </div>
-
-
-      </div>
-
-
       {/* SAĞ TARAF (SENİN KODUN AYNEN) */}
       <div style={card}>
 
@@ -533,6 +467,74 @@ export default function Presale() {
 
 
 </div>
+
+
+      {/* SOL TARAF */}
+      <div style={leftSide}>
+
+
+        <div style={infoCard}>
+          <h3 style={title}>About NeuroSpark</h3>
+          <p style={text}>
+            AI-powered Web3 risk intelligence platform that analyzes tokens,
+            detects hidden smart contract risks and helps users avoid exploits.
+          </p>
+        </div>
+
+
+        <div style={infoCard}>
+          <h3 style={title}>Why NeuroSpark</h3>
+          <ul style={list}>
+            <li>⚠️ Detect risky tokens before you buy</li>
+            <li>🔍 Analyze smart contracts instantly</li>
+            <li>🧠 AI-powered exploit detection</li>
+          </ul>
+        </div>
+
+
+        <div style={infoCard}>
+          <h3 style={title}>Tokenomics</h3>
+          <div style={text}>
+            <div>Presale: 19%</div>
+            <div>Ecosystem: 30%</div>
+            <div>Marketing: 20%</div>
+            <div>Team: 15%</div>
+            <div>Reserve: 15%</div>
+            <div>Liquidity: 1%</div>
+              <p style={{ marginTop:10, fontSize:11, color:"#cfefff", lineHeight:1.7 }}>
+                 Total Supply: 500M NSP <br/>
+                 • No minting <br/>
+                 • Liquidity locked
+              </p>
+          </div>
+        </div>
+
+
+        <div style={infoCard}>
+          <h3 style={title}>Roadmap</h3>
+          <ul style={list}>
+            <li>Q1 — Token & Presale launch</li>
+            <li>Q2 — Ecosystem growth</li>
+            <li>Q3 — AI engine</li>
+            <li>Q4 — Platform beta release</li>
+          </ul>
+           <p style={{ 
+             marginTop:10,
+             fontSize:13,
+             color:"#00ffaa",
+             fontWeight:"600",
+             cursor:"pointer",
+             paddingLeft:2
+           }}>
+             View full website →
+         </p>
+        </div>
+
+
+      </div>
+
+
+      
 
 
 {/* FOOTER */}
