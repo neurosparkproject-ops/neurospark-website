@@ -218,6 +218,7 @@ export default function Presale() {
 
 
       {!wallet ? (
+       <>
         <button onClick={connectWallet} 
         style={navBtn}>
           Connect Wallet
@@ -233,6 +234,11 @@ export default function Presale() {
     }}
   />
 </button>
+
+<p className="text-white/70 text-[11px] mt-2 px-2 leading-relaxed">
+  Mobile users: open in MetaMask or Trust Wallet browser for seamless wallet connection.
+</p>
+</>
       ) : (
         <span style={walletText}>
           {wallet.slice(0,6)}...{wallet.slice(-4)}
