@@ -49,12 +49,14 @@ export default function Presale() {
 
 
   const load = async () => {
-    if (!window.ethereum) return;
 
 
-    const provider = new ethers.BrowserProvider(window.ethereum);
-    const contract = new ethers.Contract(PRESALE_ADDRESS, ABI, provider);
+  const provider = window.ethereum
+    ? new ethers.BrowserProvider(window.ethereum)
+    : new ethers.JsonRpcProvider("https://bsc-dataseed.binance.org/");
 
+
+  const contract = new ethers.Contract(PRESALE_ADDRESS, ABI, provider);
 
     const [p, max, r, hard, end, bonus, sold] = await Promise.all([
       contract.getPrice(),
