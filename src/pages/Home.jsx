@@ -97,14 +97,24 @@ NeuroSpark <span className="text-green-400">(NSP)</span>
 <div className="flex flex-col items-center mt-6">
 
 
-  <div className="flex flex-col md:flex-row gap-4 justify-center">
+  <div className="flex justify-center">
     
-    <a
-  href="/presale"
-  className="px-8 py-4 rounded-xl font-extrabold text-black bg-lime-400 hover:bg-lime-300 transition-all duration-300 shadow-[0_0_40px_rgba(163,230,53,0.9)] hover:scale-105"
->
-  🚀 Join Presale
-</a>
+    <div className="bg-[#111827] border border-green-500/30 rounded-xl p-6 max-w-xl mx-auto">
+  <p className="text-green-400 font-bold text-lg mb-2">
+    ✅ Presale Concluded
+  </p>
+
+
+  <p className="text-white font-semibold">
+    94,974,782 NSP permanently burned
+  </p>
+
+
+  <p className="text-gray-400 text-sm mt-3">
+    NeuroSpark is now focused on AI-powered risk analysis,
+    platform development, and community growth.
+  </p>
+</div>
 
     <a
      
@@ -443,7 +453,7 @@ Reentrancy pattern detected during collateral withdrawal.
           <PieChart>
             <Pie
               data={[
-                { name: "Presale", value: 19 },
+                { name: "Burned", value: 19 },
                 { name: "Ecosystem", value: 30 },
                 { name: "Marketing", value: 20 },
                 { name: "Team", value: 15 },
@@ -456,7 +466,7 @@ Reentrancy pattern detected during collateral withdrawal.
               dataKey="value"
               label
             >
-              <Cell fill="#22c55e" />
+              <Cell fill="#ef4444" />
               <Cell fill="#06b6d4" />
               <Cell fill="#f59e0b" />
               <Cell fill="#8b5cf6" />
@@ -480,8 +490,10 @@ Reentrancy pattern detected during collateral withdrawal.
 
       <p>
         <strong>Total Supply:</strong> 500,000,000 NSP (fixed)<br />
-        <strong>Minting:</strong> Disabled — no additional tokens can ever be created<br />
-        <strong>Liquidity:</strong> 5,000,000 NSP paired with <strong>150–250 BNB</strong> at launch, locked for <strong>12 months</strong>
+<strong>Burned:</strong> 94,974,782 NSP permanently burned<br />
+<strong>Effective Supply:</strong> 405,025,218 NSP<br />
+<strong>Minting:</strong> Disabled — no additional tokens can ever be created<br />
+<strong>Liquidity:</strong> 5,000,000 NSP paired with <strong>150-250 BNB</strong> at launch, locked for <strong>12 months</strong>
       </p>
 
 
@@ -490,7 +502,7 @@ Reentrancy pattern detected during collateral withdrawal.
 
 
       <ul className="space-y-2">
-        <li><strong>19% — Presale</strong> (95,000,000 NSP)</li>
+        <li><strong>Burned</strong> — 94,974,782 NSP permanently removed from circulation</li>
         <li><strong>30% — Ecosystem</strong> (150,000,000 NSP)</li>
         <li><strong>20% — Marketing</strong> (100,000,000 NSP)</li>
         <li><strong>15% — Team</strong> (75,000,000 NSP)</li>
@@ -511,18 +523,15 @@ Reentrancy pattern detected during collateral withdrawal.
 
 
       {/* PRESALE */}
-      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Presale Mechanics</h3>
+      <h3 className="text-xl font-semibold text-cyan-400 mt-6">Presale Status</h3>
 
 
-      <ul className="list-disc ml-6 space-y-2">
-        <li>Duration: <strong>21 days</strong> or until hardcap is reached</li>
-        <li>
-  Unsold tokens will be permanently burned via smart contract and sent to the dead address (0x000000000000000000000000000000000000dEaD), fully verifiable on-chain.
-</li>
-        <li><strong>10,000,000 NSP bonus pool</strong></li>
-        <li>Buyers receive up to <strong>20% bonus tokens</strong> per purchase</li>
-        <li>Bonus is distributed until the pool is depleted</li>
-      </ul>
+<ul className="list-disc ml-6 space-y-2">
+  <li>Presale concluded successfully</li>
+  <li>94,974,782 NSP permanently burned</li>
+  <li>Presale contract balance reduced to zero</li>
+  <li>Burn transaction publicly verifiable on-chain</li>
+</ul>
 
 
       {/* VESTING */}
@@ -606,7 +615,7 @@ Phase 1 — Foundation (Q1 2026)
 Phase 2 — Ecosystem Launch (Q2 2026)
 </h3>
 <ul className="list-disc ml-6 mt-2 text-gray-300">
-<li>NSP token presale (launch after final security validation)</li>
+<li>NSP token presale completed and unsold tokens permanently burned</li>
 <li>Smart contract security review</li>
 <li>Community growth campaign</li>
 <li>Initial exploit analysis content series</li>
@@ -684,7 +693,7 @@ Phase 5 — Ecosystem Expansion (2027)
         address: "0x625df14C51555B3264dAbe62dDE85D2b6cb19fbD"
       },
       {
-        title: "Presale Contract",
+        title: "Completed Presale Contract",
         address: "0x5C13DB982f74CAFf154F66EC791a3b6a17dF5C7f"
       },
       {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 
 const PRESALE_ADDRESS = "0x5C13DB982f74CAFf154F66EC791a3b6a17dF5C7f";
@@ -219,33 +220,20 @@ export default function Presale() {
       </div>
 
 
-      {!wallet ? (
-       <>
-        <button onClick={connectWallet} 
-        style={navBtn}>
-          Connect Wallet
-
-
-  <img
-    src="/wallet.png"
-    style={{    
-      width: 20,    
-      height: 20,        
-      marginLeft: 6,
-      objectFit: "contain" 
-    }}
-  />
+      <button
+  onClick={connectWallet}
+  style={navBtn}
+>
+  {wallet
+    ? `${wallet.slice(0,6)}...${wallet.slice(-4)}`
+    : "Cüzdanı Bağla"}
 </button>
 
 <p className="text-white/70 text-[11px] mt-2 px-2 leading-relaxed">
   Mobile users: open in MetaMask or Trust Wallet browser for seamless wallet connection.
 </p>
-</>
-      ) : (
-        <span style={walletText}>
-          {wallet.slice(0,6)}...{wallet.slice(-4)}
-        </span>
-      )}
+
+      
     </div>
 
 
